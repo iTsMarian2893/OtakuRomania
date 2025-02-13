@@ -1,0 +1,168 @@
+<html>
+<head>
+
+    <title>Vagabond</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="scripts/menu.js"></script>
+    <link rel="stylesheet" href="css/start.css">
+    <link rel="stylesheet" href="css/read.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/vagabond_detalii.css">
+    <link rel="stylesheet" href="css/header.css">
+
+</head>
+<body>
+        <!--Header-->
+        <header id="headerr">
+            <div id="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+            <div class="menu-container">
+              <div class="close-menu" onclick="toggleMenu()">Închide Meniu</div>
+              <BR><BR><BR>
+              <ul class="menu-list">
+                <li class="nav-item"><a href="../../main.html" class="nav-link">Acasă</a></li>
+                <li class="nav-item"><a href="../../mai_mult.html" class="nav-link">Mai Mult</a></li>
+                <li class="nav-item"><a href="../../contact.html" class="nav-link">Contact</a></li>
+              </ul>
+            </div>
+            <a href="../../main.html" class="logo-header">OtakuRo</a>
+        </header>
+
+        <br><BR><BR><BR>
+
+
+
+        <!--Sectiune Detalii Manga-->
+        <section class="sectiune-manga">
+            <div id="background">
+                <div id="cover"></div>
+            </div>
+            <div class="container-manga">
+                <div class="detalii-manga">
+                    <div class="row-manga">
+                        <div class="poza-manga">
+                            <div class="manga-poza set-bg" style="background-image: url('poze/vagabond_cover.jpg')">
+                            </div>
+                        </div>
+                        <div class="content-manga"> 
+                            <div class="detalii-text-manga">
+                                <div class="titlu">
+                                    <h3>Vagabond</h3>
+                                    <span>ガチアクタ</span>
+                                </div>
+                                <div class="container-desc">
+                                    <p class="text-desc">În Japonia secolului al XVI-lea, Shinmen Takezou este un tânăr sălbatic și aspru, atât prin înfățișare, cât și prin acțiunile sale. Natura sa agresivă i-a adus reproșul și teama colectivă a satului său, ceea ce l-a determinat pe el și pe cel mai bun prieten al său, Matahachi Honiden, să fugă în căutarea a ceva mai măreț decât viața de provincie. Cei doi se înrolează în armata Toyotomi, tânjind după glorie - dar când Toyotomi suferă o înfrângere zdrobitoare în fața clanului Tokugawa în bătălia de la Sekigahara, prietenii abia reușesc să scape cu viață.</p>
+                                    <p class="text-desc">După ce cei doi sunt despărțiți, Shinmen se întoarce acasă cu misiunea de a anunța familia Hon'iden despre supraviețuirea lui Matahachi. În schimb, se trezește că este un infractor căutat, fiind acuzat de presupusa crimă a prietenului său pe baza trecutului său violent. După ce este capturat, este spânzurat de un copac și lăsat să moară. Un călugăr itinerant, distinsul Takuan Soho, îi este milă de "copilul diavolului", eliberându-l în secret pe Shinmen și botezându-l cu un nou nume pentru a evita urmărirea de către autorități: Musashi Miyamoto.</p>
+                                    <p class="text-desc">Vagabondul este o relatare fictivă a vieții unuia dintre cei mai renumiți spadasini japonezi, "Sfântul Sabiei" Musashi Miyamoto - ascensiunea sa de la un spadasin fără altă dorință decât aceea de a deveni "Invincibil sub ceruri" la un războinic luminat care învață încet-încet importanța prietenilor apropiați, a reflecției de sine și a vieții însăși.</p>
+                                </div>
+                                <div class="info-bg">
+                                <div class="info">
+                                    <span class="info-stanga">Capitole:</span>
+                                    <span class="info-dreapta">3</span>
+                                </div>
+                                <div class="info">
+                                    <span class="info-stanga">Volume:</span>
+                                    <span class="info-dreapta">37</span>
+                                </div>
+                                <div class="info">
+                                    <span class="info-stanga">Status:</span>
+                                    <span class="info-dreapta">În Pauză</span>
+                                </div>
+                                <div class="info">
+                                    <span class="info-stanga">Aparitie:</span>
+                                    <span class="info-dreapta">Sep. 3, 1998</span>
+                                </div>
+                                <div class="info">
+                                    <span class="info-stanga">Autor:</span>
+                                    <span class="info-dreapta">Takehiko Inoue</span>
+                                </div>
+                                <div class="info">
+                                    <span class="info-stanga">Art:</span>
+                                    <span class="info-dreapta">Takehiko Inoue</span>
+                                </div>
+                                <div class="info linii-cat">
+                                    <span class="info-stanga"></span>
+                                    <a>Acțiune</a>
+                                    <a>Mister</a>
+                                    <a>Sci-Fi</a>
+                                </div>
+
+                                </div>
+                                <div class="manga-btn">
+                                    <a href="cap1.html" class="citeste-btn"><span>Citește</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <br><br><br><br>
+           <!--Secitiunea de Review si de Altele-->
+           <section class="row-manga">
+                        <div class="review">
+                            <div class="publica-rev">
+                                <div class="titlu-ra">
+                                    <h5>Recenzia ta</h5>
+                                </div>
+                                <form id="reviewForm" onsubmit="postReview(); return false;">
+                                    <input type="text" id="reviewText" placeholder="Scrie ceva interesant" class="text-input" required>
+                                    <button type="submit">PUBLICĂ</button>
+                                </form>
+                            </div>
+                            <br><br>
+                            <div class="alte-rev">
+                                <div class="titlu-ra">
+                                    <h5>Alte Recenzii</h5>
+                                </div>
+                                <div class="item-re">
+                                <div class="avatar-re">
+                                        <img src="poze/kirito_avatar.png" alt="Avatar utilizator">
+                                </div>
+                                </div>
+
+                                    <div class="container-text">
+                                        <h6>Marian</h6>
+                                        <p>Este geniala aceata manga! 10/10</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="altele">
+                            <div class="rec-manga">
+                                <div class="titlu-ra">
+                                    <h5>S-ar putea să-ți placă și...</h5>
+                                </div>
+                                <div class="image-container">
+                                    <a href="../ori_dragon/ori_dragon_detalii.html" class="image-link">
+                                      <div class="image" style="background-image: url('poze/ori_cover.jpg')"></div>
+                                      <div class="text-overlay">
+                                        <h2 class="text">Ori of the Dragon Chain: "Heart" in the Mind</h2>
+                                      </div>
+                                    </a>
+                                  </div>
+                                <div class="image-container">
+                                    <a href="../ao_ashi/ao_ashi_detalii.html" class="image-link">
+                                      <div class="image" style="background-image: url('poze/ao_ashi4.jpg')"></div>
+                                      <div class="text-overlay">
+                                        <h2 class="text">Ao Ashi</h2>
+                                      </div>
+                                    </a>
+                                  </div> 
+                                <div class="image-container">
+                                    <a href="../tokyo_revengers/tokyo_revengers_detalii.html" class="image-link">
+                                      <div class="image" style="background-image: url('poze/tokyo_revengers.png')"></div>
+                                      <div class="text-overlay">
+                                        <h2 class="text">Tokyo Revengers</h2>
+                                      </div>
+                                    </a>
+                                  </div>
+                            </div>
+                        </div>
+                    </section>
+</body>
+</html>

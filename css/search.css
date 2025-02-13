@@ -1,0 +1,593 @@
+#header {
+    background-color: #f1f1f1;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .search-button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #333;
+    padding: 10px;
+    margin-left: 762px;
+    color: #fff; /* Modificați culoarea în alb (#fff) */
+
+  }
+  
+  .search-bar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    text-align: center;
+    display: none;
+    height: 60px; /* Modificați înălțimea după preferințe */
+    z-index: 9999; 
+  
+  }
+  
+  .search-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    padding: 10px;
+    width: 300px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .search-input {
+    border: none;
+    outline: none;
+    flex: 1;
+    padding: 5px;
+  }
+  
+  .search-submit {
+    border: none;
+    outline: none;
+    background-color: #43a047;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .search-results {
+    list-style-type: none;
+    padding: 0;
+    margin-top: -17px;
+    z-index: 9999; /* Setăm un z-index mare pentru a fi afișat deasupra altor elemente */
+    margin-bottom: 0; /* Eliminăm margin-bottom */
+  }
+  
+  .search-results li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #20a3db;
+    color: #fff;
+    margin-bottom: 0; /* Eliminăm margin-bottom */
+
+  }
+  
+  .search-results li img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+  .search-results .result-details {
+    flex: 1;
+  }
+  
+  .search-results .result-title {
+    font-weight: bold;
+  }
+  
+  .search-results .result-year {
+    margin-top: 5px;
+  }
+  
+  .search-results .result-link {
+    margin-top: 10px;
+    display: block;
+    text-align: right;
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  /* Optimizare pentru dispozitive cu lățimea de ecran până la 1600px */
+  @media screen and (max-width: 1600px) {
+    .search-bar {
+      padding: 30px;
+      height: 60px; /* Modificați înălțimea după preferințe */
+  
+    }
+  
+    .search-form {
+      width: 300px;
+      padding: 10px;
+    }
+  
+    .search-input {
+      padding: 7px;
+      font-size: 20px;
+    }
+  
+    .search-button {
+      font-size: 30px;
+      padding: 7px;
+    }
+  
+    .search-results li {
+      padding: 30px;
+      font-size: 30px;
+    }
+  }
+  @media screen and (max-width: 2519px){
+    .search-results li {
+        padding: 25px;
+        font-size: 28px;
+      }
+      button.log {
+        width: 203px;
+        height: 45px;
+        font-size: 25px;
+        border-radius: 130px;
+    }
+      .search-results{
+          width: 500px;
+          height: 53px;
+          margin-left: 682px;
+      }
+      .search-results .result-title {
+          font-size: 18px;
+      }
+      .search-results .result-year {
+          font-size: 18px;
+      } 
+      .search-button{
+        font-size: 26px;
+        padding: 5px;
+        margin-left: 1382px;
+      }
+      .search-form {
+        width: 500px;
+        padding: 6px;
+        height: 60px;
+        margin-top: 47px;
+    }
+    .menu-list>.nav-item {
+      font-size: 24px;
+      font-size: 30px;
+      margin-bottom: 15px;
+      border-bottom: 7px solid rgba(255,255,255,.05);
+  }
+  .nav-link {
+    font-size: 24px;
+    font-size: 30px;
+    padding: 10px 0;
+    margin-bottom: 15px;
+}
+  }
+  @media screen and (max-width: 1910px){
+    .search-results li {
+        padding: 25px;
+        font-size: 28px;
+      }
+      .search-results{
+          width: 450px;
+          height: 53px;
+          margin-left: 491px;
+      }
+      .search-results .result-title {
+          font-size: 18px;
+      }
+      .search-results .result-year {
+          font-size: 18px;
+      } 
+  }
+  /* Optimizare pentru dispozitive cu lățimea de ecran până la 1800px */
+  @media screen and (max-width: 1800px) {
+    .search-bar {
+      padding: 25px;
+      height: 60px; /* Modificați înălțimea după preferințe */
+  
+    }
+  
+    .search-form {
+        width: 450px;
+        padding: 12px;
+        margin-top: 47px;
+    }
+  
+    .search-input {
+      padding: 6px;
+      font-size: 18px;
+    }
+  
+    .search-button {
+      font-size: 28px;
+      padding: 6px;
+      margin-left: 973px;
+    }
+  
+    .search-results li {
+      padding: 25px;
+      font-size: 28px;
+    }
+    .search-results{
+        width: 450px;
+        height: 53px;
+        margin-left: 491px;
+    }
+    .search-results .result-title {
+        font-size: 18px;
+    }
+    .search-results .result-year {
+        font-size: 18px;
+    }
+  }
+ 
+  @media screen and (max-width: 1910px){
+    .search-results li {
+        padding: 25px;
+        font-size: 28px;
+      }
+      .search-results{
+          width: 450px;
+          height: 53px;
+          margin-left: 491px;
+      }
+      .search-results .result-title {
+          font-size: 18px;
+      }
+      .search-results .result-year {
+          font-size: 18px;
+      } 
+      .search-button{
+        font-size: 26px;
+        padding: 5px;
+        margin-left: 852px;
+      }
+  }
+  @media screen and (max-width: 1410px){
+    .search-button {
+        font-size: 28px;
+        padding: 6px;
+        margin-left: 1156px;
+    }
+    .search-form {
+        width: 350px;
+        padding: 8px;
+    }
+    .search-input {
+        padding: 6px;
+        font-size: 18px;
+    }
+    .search-submit {
+        font-size: 40px;
+    }
+  }
+
+
+ /* Optimizare pentru dispozitive cu lățimea de ecran până la 1400px */
+ @media screen and (max-width: 1500px) {
+    .search-bar {
+      padding: 20px;
+      height: 60px; /* Modificați înălțimea după preferințe */
+  
+    }
+  
+    .search-form {
+      width: 436px;
+      padding: 6px;
+      height: 60px; /* Modificați înălțimea după preferințe */
+      margin-top: 47px;
+
+    }
+  
+    .search-input {
+      padding: 5px;
+      font-size: 16px;
+    }
+  
+    .search-button {
+      font-size: 26px;
+      padding: 5px;
+      margin-left: 886px;
+    }
+  
+    .search-results li {
+      padding: 20px;
+      font-size: 26px;
+    }
+    .search-submit {
+        font-size: 26px;
+    }
+    .search-results{
+        width: 436px;
+        height: 53px;
+        margin-left: 457px;
+    }
+    .search-results .result-title {
+        font-size: 18px;
+    }
+    .search-results .result-year {
+        font-size: 18px;
+    }
+  }
+
+
+  /* Optimizare pentru dispozitive cu lățimea de ecran până la 1400px */
+  @media screen and (max-width: 1400px) {
+    .search-bar {
+      padding: 20px;
+      height: 60px; /* Modificați înălțimea după preferințe */
+  
+    }
+  
+    .search-form {
+      width: 400px;
+      padding: 6px;
+      height: 60px; /* Modificați înălțimea după preferințe */
+      margin-top: 47px;
+
+    }
+  
+    .search-input {
+      padding: 5px;
+      font-size: 16px;
+    }
+  
+    .search-button {
+      font-size: 26px;
+      padding: 5px;
+      margin-left: 737px;
+    }
+  
+    .search-results li {
+      padding: 20px;
+      font-size: 26px;
+    }
+    .search-results{
+        width: 400px;
+        height: 53px;
+        margin-left: 32.3%;
+      }
+    .search-results .result-title {
+        font-size: 18px;
+    }
+    .search-results .result-year {
+        font-size: 18px;
+    }
+  }
+
+    /* Optimizare pentru dispozitive cu lățimea de ecran până la 1200px */
+  @media screen and (max-width: 1200px){
+    .search-button {
+        font-size: 26px;
+        padding: 5px;
+        margin-left: 610px;
+      }  
+  }
+      /* Optimizare pentru dispozitive cu lățimea de ecran până la 1200px */
+  @media screen and (max-width: 1100px){
+    .search-button {
+        font-size: 26px;
+        padding: 5px;
+        margin-left: 552px;
+      }  
+      .search-form {
+        width: 538px;
+        padding: 6px;
+        height: 69px;
+        margin-top: 47px;
+    }
+    .search-submit{
+        font-size: 25px;
+    }
+    .search-input {
+        padding: 5px;
+        font-size: 24px;
+    }
+  }
+
+  /* Optimizare pentru dispozitive cu lățimea de ecran până la 999px */
+  @media screen and (max-width: 999px) {
+    .search-bar {
+      padding: 40px;
+      height: 60px; /* Modificați înălțimea după preferințe */
+  
+    }
+  
+    .search-form {
+      width: 860px;
+      padding: 15px;
+      height: 99px;
+  
+    }
+  
+    .search-input {
+      padding: 10px;
+      font-size: 40px;
+    }
+  
+    .search-button {
+      font-size: 66px;
+      padding: 10px;
+      margin-left: -16px;
+
+    }
+  
+    .search-results li {
+      padding: 40px;
+      font-size: 40px
+    }
+    .search-submit{
+      font-size: 40px;
+    }
+  
+    .search-results li img {
+      width: 100px;
+      height: 100px;
+      margin-right: 20px;
+    }
+  
+    .search-results .result-title {
+      font-size: 18px;
+      font-size: 40px;
+  
+    }
+  
+    .search-results .result-year {
+      font-size: 14px;
+      margin-top: 10px;
+      font-size: 40px;
+  
+    }
+  
+    .search-results .result-link {
+      font-size: 16px;
+      margin-top: 20px;
+      font-size: 40px;
+  
+    }
+  }
+
+    /* Optimizare pentru dispozitive cu lățimea de ecran până la 999px */
+    @media screen and (max-width: 980px) {
+        .search-bar {
+          padding: 40px;
+          height: 60px; /* Modificați înălțimea după preferințe */
+      
+        }
+      
+        .search-form {
+          width: 860px;
+          padding: 15px;
+          height: 99px;
+          margin-top: 123px;
+      
+        }
+      
+        .search-input {
+          padding: 10px;
+          font-size: 40px;
+        }
+      
+        .search-button {
+          font-size: 66px;
+          padding: 10px;
+          margin-left: 53px;
+    
+        }
+      
+        .search-results li {
+          padding: 40px;
+          font-size: 40px
+        }
+        .search-submit{
+          font-size: 40px;
+        }
+      
+        .search-results li img {
+          width: 100px;
+          height: 100px;
+          margin-right: 20px;
+        }
+      .search-results{
+        width: 858px;
+        height: 53px;
+        margin-left: 21px;
+      }
+        .search-results .result-title {
+          font-size: 18px;
+          font-size: 40px;
+      
+        }
+      
+        .search-results .result-year {
+          font-size: 14px;
+          margin-top: 64px;
+          font-size: 40px;
+      
+        }
+      
+        .search-results .result-link {
+          font-size: 16px;
+          margin-top: 20px;
+          font-size: 40px;
+      
+        }
+      }
+  
+  /* Optimizare pentru dispozitive cu lățimea de ecran până la 860px */
+  @media screen and (max-width: 860px) {
+    .search-bar {
+      padding: 15px;
+      height: 60px; /* Modificați înălțimea după preferințe */
+  
+    }
+  
+    .search-form {
+      width: 450px;
+      padding: 4px;
+    }
+  
+    .search-input {
+      padding: 4px;
+      font-size: 14px;
+    }
+  
+    .search-button {
+      font-size: 24px;
+      padding: 4px;
+    }
+  
+    .search-results li {
+      padding: 15px;
+      font-size: 24px;
+    }
+  }
+  
+  /* Optimizare pentru dispozitive cu lățimea de ecran până la 760px */
+  @media screen and (max-width: 760px) {
+    .search-bar {
+      padding: 10px;
+      height: 60px; /* Modificați înălțimea după preferințe */
+  
+    }
+  
+    .search-form {
+      width: 500px;
+      padding: 2px;
+    }
+  
+    .search-input {
+      padding: 2px;
+      font-size: 12px;
+    }
+  
+    .search-button {
+      font-size: 20px;
+      padding: 2px;
+    }
+  
+    .search-results li {
+      padding: 10px;
+      font-size: 20px;
+    }
+  }
+  

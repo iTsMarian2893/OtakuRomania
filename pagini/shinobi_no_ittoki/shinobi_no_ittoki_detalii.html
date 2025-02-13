@@ -1,0 +1,159 @@
+<html>
+<head>
+    <title>Shinobi no Ittoki</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="scripts/menu.js"></script>
+    <link rel="stylesheet" href="css/start.css">
+    <link rel="stylesheet" href="css/read.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/shinobi_no_ittoki_detalii.css">
+    <link rel="stylesheet" href="css/header.css">
+
+  
+</head>
+<body>
+        <!--Header-->
+        <header id="headerr">
+            <div id="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+            <div class="menu-container">
+              <div class="close-menu" onclick="toggleMenu()">Închide Meniu</div>
+              <BR><BR><BR>
+              <ul class="menu-list">
+                <li class="nav-item"><a href="../../main.html" class="nav-link">Acasă</a></li>
+                <li class="nav-item"><a href="../../mai_mult.html" class="nav-link">Mai Mult</a></li>
+                <li class="nav-item"><a href="../../contact.html" class="nav-link">Contact</a></li>
+              </ul>
+            </div>
+            <a href="../../main.html" class="logo-header">OtakuRo</a>
+        </header>
+
+        <br><BR><BR><BR>
+
+
+
+        <!--Sectiune Detalii Manga-->
+        <section class="sectiune-manga">
+            <div id="background">
+                <div id="cover"></div>
+            </div>
+            <div class="container-manga">
+                <div class="detalii-manga">
+                    <div class="row-manga">
+                        <div class="poza-manga">
+                            <div class="manga-poza set-bg" style="background-image: url('poze/shinobi_no_ittoki_cover.jpg')">
+                            </div>
+                        </div>
+                        <div class="content-manga"> 
+                            <div class="detalii-text-manga">
+                                <div class="titlu">
+                                    <h3>Shinobi no Ittoki</h3>
+                                    <span> 忍の一時</span>
+                                </div>
+                                <div class="container-desc">
+                                    <p class="text-desc">Ittoki Sakuraba nu reușește să înțeleagă de ce mama sa, unchiul său și prietena sa din copilărie, Kousetsu, par să ia atât de în serios securitatea sa. Kousetsu îl urmărește și îl observă în mod constant, fără să țină cont de intimitatea sa, concentrându-se doar pe menținerea siguranței sale în fiecare clipă. Dar această hărțuire constantă începe să capete sens atunci când Satomi Tsubaki, o adorabilă elevă din anul doi de la liceul său, îl invită pe Ittoki la o întâlnire. Deși inițial inocentă, adevăratele intenții ale lui Tsubaki devin curând evidente atunci când Ittoki îi vizitează casa; ea plănuiește să-l asasineze, și nu este singură. În mod surprinzător, cei care îi vin în ajutor sunt unchiul său și Kousetsu - îmbrăcați în ținutele lor întunecate și mortale de ninja.</p>
+                                    <p class="text-desc">După ce Ittoki este escortat în siguranță, mama sa îi dezvăluie adevărul: el este al 19-lea moștenitor al unui clan nobil de ninja cunoscut sub numele de Iga și ținta asasinării de către clanul rival, Koga. Pentru a se proteja împotriva acestei noi amenințări, Ittoki trebuie să-și perfecționeze abilitățile la singura academie ninja rămasă în Japonia: Academia Ninja Kokuten.</p>
+                                </div>
+                                <div class="info-bg">
+                                <div class="info">
+                                    <span class="info-stanga">Episoade:</span>
+                                    <span class="info-dreapta">12</span>
+                                </div>
+                                <div class="info">
+                                    <span class="info-stanga">Status:</span>
+                                    <span class="info-dreapta">Terminat</span>
+                                </div>
+                                <div class="info">
+                                    <span class="info-stanga">Aparitie:</span>
+                                    <span class="info-dreapta">Oct. 4, 2022</span>
+                                </div>
+                                <div class="info">
+                                    <span class="info-stanga">Studio:</span>
+                                    <span class="info-dreapta">TROYCA</span>
+                                </div>
+                                <div class="info linii-cat">
+                                    <span class="info-stanga"></span>
+                                    <a>Acțiune</a>
+                                    <a>Ninja</a>
+                                    <a>Drama</a>
+                                    <a>Aventură</a>
+                                </div>
+
+                                </div>
+                                <div class="manga-btn">
+                                    <a href="ep1.html" class="citeste-btn"><span>Vizionează</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <br><br><br><br>
+           <!--Secitiunea de Review si de Altele-->
+           <section class="row-manga">
+                        <div class="review">
+                            <div class="publica-rev">
+                                <div class="titlu-ra">
+                                    <h5>Recenzia ta</h5>
+                                </div>
+                                <form id="reviewForm" onsubmit="postReview(); return false;">
+                                    <input type="text" id="reviewText" placeholder="Scrie ceva interesant" class="text-input" required>
+                                    <button type="submit">PUBLICĂ</button>
+                                </form>
+                            </div>
+                            <br><br>
+                            <div class="alte-rev">
+                                <div class="titlu-ra">
+                                    <h5>Alte Recenzii</h5>
+                                </div>
+                                <div class="item-re">
+                                <div class="avatar-re">
+                                    <img src="poze/kirito_avatar.png" alt="Avatar utilizator">
+                                </div>
+                                </div>
+                                    <div class="container-text">
+                                        <h6>Marian</h6>
+                                        <p>Un anime bun! 10/10</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="altele">
+                            <div class="rec-manga">
+                                <div class="titlu-ra">
+                                    <h5>S-ar putea să-ți placă și...</h5>
+                                </div>
+                                <div class="image-container">
+                                    <a href="../ori_dragon/ori_dragon_detalii.html" class="image-link">
+                                      <div class="image" style="background-image: url('poze/ori_cover.jpg')"></div>
+                                      <div class="text-overlay">
+                                        <h2 class="text">Ori of the Dragon Chain: "Heart" in the Mind</h2>
+                                      </div>
+                                    </a>
+                                  </div>
+                                <div class="image-container">
+                                    <a href="../ao_ashi/ao_ashi_detalii.html" class="image-link">
+                                      <div class="image" style="background-image: url('poze/ao_ashi4.jpg')"></div>
+                                      <div class="text-overlay">
+                                        <h2 class="text">Ao Ashi</h2>
+                                      </div>
+                                    </a>
+                                  </div> 
+                                <div class="image-container">
+                                    <a href="../tokyo_revengers/tokyo_revengers_detalii.html" class="image-link">
+                                      <div class="image" style="background-image: url('poze/tokyo_revengers.png')"></div>
+                                      <div class="text-overlay">
+                                        <h2 class="text">Tokyo Revengers</h2>
+                                      </div>
+                                    </a>
+                                  </div>
+                            </div>
+                        </div>
+                    </section>
+</body>
+</html>

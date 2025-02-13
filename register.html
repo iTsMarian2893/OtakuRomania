@@ -1,0 +1,117 @@
+<html>
+<head>
+    <title>Pagina</title>
+    <link rel="stylesheet" href="css/start.css">
+    <link rel="stylesheet" href="css/read.css">
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/elegant-icons.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <div id="wrapper">
+        <!--Header-->
+        <div id="header">
+            <div class="container">
+                <div class="menu_site">
+                    <div class="icon-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="menu-items">
+                        <a href="start.html">Start</a>
+                        <a href="read.html">Citeste</a>
+                        <a href="login.html">Login</a>
+                        <a href="register.html">Înregistrare</a>      
+                        <a href="detalii.html">Detalii</a>
+                        <a href="main.html">Main</a>
+                    </div>
+                </div>
+            </div>
+            <!--Logo-->
+            <a href="start.html" id="logo-sus">
+                <img src="poze/logo2.png">
+            </a>
+        </div>
+            <!-- Normal Breadcrumb Begin -->
+    <section class="normal-breadcrumb">
+        <div class="container-login">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="normal__breadcrumb__text">
+                        <h2>Bine ați venit pe site!</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Normal Breadcrumb End -->
+
+        <!-- Login Section Begin -->
+        <div class="login">
+            <div id="container-login">
+                <div class="row">
+                    <div class="login-stanga">
+                        <div class="login_form">
+                            <h3>Înregistrare</h3>
+                            <form action="register.php" method="POST">
+                                <div class="input_item">
+                                    <input type="text" placeholder="Adresa Email" name="email">
+                                    <span class="icon-email "></span>
+                                </div>
+                                <div class="input_item">
+                                    <input type="text" placeholder="Nume Utilizator" name="username">
+                                    <span class="icon-profile "></span>
+                                </div>
+                                <div class="input_item">
+                                    <input type="password" placeholder="Parola" name="password">
+                                    <span class="icon_lock"></span>
+                                </div>
+                                <button type="submit" class="site-btn">Loghează-te acum!</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="login-dreapta">
+                        <div class="login-register">
+                            <h3>Înregistrează-te cu:</h3>
+                            <a href="register.html" class="btn-facebook">Înregistrează-te cu Facebook</a>
+                            <br><br>
+                            <a href="register.html" class="btn-google">Înregistrează-te cu Google</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+<script>
+    var menu = document.querySelector('.menu_site');
+var container = document.querySelector('.container');
+
+menu.addEventListener('mouseenter', function() {
+  container.classList.add('open');
+});
+
+container.addEventListener('mouseleave', function() {
+  container.classList.remove('open');
+});
+</script>   
+<script>
+    var signinContainer = document.getElementById("signin-container");
+signinContainer.addEventListener("click", function() {
+  console.log("Butonul Sign In a fost apăsat.");
+});
+
+</script>
+<script>
+    var signinContainer = document.getElementById("main-container");
+signinContainer.addEventListener("click", function() {
+  console.log("Butonul Sign In a fost apăsat.");
+});
+
+</script>
+</body>
+</html>

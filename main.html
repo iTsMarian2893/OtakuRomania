@@ -1,0 +1,969 @@
+<html>
+<head>
+    <link rel="styleshhet" href="css/mediaa.css">
+    <link rel="stylesheet" href="css/search2.css">
+    <link rel="stylesheet" href="css/header.css">
+
+    <script src="search.js"></script>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/card.css">
+    <link rel="stylesheet" href="css/main3.css">
+
+    <link rel="stylesheet" href="css/start.css">
+    <link rel="stylesheet" href="css/start.css">
+    <link rel="stylesheet" href="css/fontawesome.css">
+    <link rel="stylesheet" href="css/all.css">
+          <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+          <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/login2.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<style>
+    p {
+    font-family: var(--font-text);
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--white);
+}
+@media (any-hover: hover) and (any-pointer: fine){
+.card__title::after {
+    opacity: 0;
+    transform: scaleX(0);
+    transition: opacity 1000ms ease-in, transform 500ms ease-out;
+    transition-delay: 500ms;
+    transform-origin: right;
+}}
+.card__title::after {
+    content: "";
+    position: absolute;
+    height: 0.3125rem;
+    width: calc(100% + 1.25rem);
+    bottom: calc((1.25rem - 0.5rem) * -1);
+    left: -1.25rem;
+    background-color: var(--brand-color);
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    text-decoration: none;
+    color: white;
+}
+
+
+</style>
+
+</head>
+<body id="boddy" style="    background-image: url(poze/bg_blurat.jpg);">
+<div class="wrapper-pagina">
+        <!--Header-->
+        <header id="headerr">
+
+            <div class="logo-menu">
+                <div id="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+                <div class="menu-container">
+                    <div class="close-menu" onclick="toggleMenu()">Închide Meniu</div>
+                    <BR><BR><BR>
+                    <ul class="menu-list">
+                      <li class="nav-item"><a href="#" class="nav-link">Acasă</a></li>
+                      <li class="nav-item"><a href="mai_mult.html" class="nav-link">Mai Mult</a></li>
+                      <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                  </div>
+                  <a href="start.html" class="logo-header">OtakuRo</a>
+            </div>
+            <div class="log-container">
+                <button class="search-button"><i class="fas fa-search"></i></button>
+                <div class="auth-btn" id="authButtons">
+                    <a href="login_regis.html" class="titlu-auten">Autentificare</a>
+                </div>
+                <div class="user-btn" id="userBtn" style="display: none;"></div>
+            </div>
+        </header>
+        <div class="search-bar" id="search-bar">
+            <form action="#" class="search-form">
+              <input type="search" name="search-input" class="search-input" placeholder="Caută serii...">
+              <button type="submit" class="search-submit"><i class="fas fa-search"></i></button>
+            </form>
+            <ul class="search-results"></ul>
+          </div>
+
+
+          <script>
+            
+var searchButton = document.querySelector(".search-button");
+var searchBar = document.querySelector("#search-bar");
+var searchInput = document.querySelector(".search-input");
+var searchResultsList = document.querySelector(".search-results");
+
+searchButton.addEventListener("click", function() {
+  searchBar.style.display = "block";
+  searchInput.focus();
+});
+
+function performSearch(event) {
+  event.preventDefault();
+
+  var searchValue = searchInput.value.trim().toLowerCase();
+
+  if (searchValue.length > 0) {
+    var results = [
+      {
+        title: "One Piece",
+        image: "poze/one_piece_red.png",
+        link: "pagini/one_piece_red/one_piece_red_detalii.html"
+      },
+      {
+        title: "Ao Ashi",
+        image: "poze/ao_ashi4.jpg",
+        link: "pagini/ao_ashi/ao_ashi_detalii.html"
+      },
+      {
+        title: "Blue Lock",
+        image: "poze/blue_lock_cover.jpg",
+        link: "pagini/blue_lock/blue_lock_detalii.html"
+      },
+      {
+        title: "Cyberpunk Edgerunners",
+        image: "poze/cyberpunk_cover.jpg",
+        link: "pagini/cyberpunk_edgerunners/cyberpunk_edgerunners_detalii.html"
+      },
+      {
+        title: "Demon Slayer Season 1",
+        image: "poze/demon_slayer_s1_cover.jpg",
+        link: "pagini/demon_slayer_s1/demon_slayer_s1_detalii.html"
+      },
+      {
+        title: "Engage Kiss",
+        image: "poze/engage_kiss_cover.png",
+        link: "pagini/engage_kiss/engage_kiss_detalii.html"
+      },
+      {
+        title: "Gachiakuta",
+        image: "poze/gachiakuta_logo.jpg",
+        link: "pagini/gachiakuta/gachiakuta_detalii.html"
+      },
+      {
+        title: "Kagurabachi",
+        image: "poze/kagurabachi_cover.jpg",
+        link: "pagini/kagurabachi/kagurabachi_detalii.html"
+      },
+      {
+        title: "My Hero Academia Season 6",
+        image: "poze/my_hero_s6_cover.jpg",
+        link: "pagini/mha_s6/mha_s6_detalii.html"
+      },
+      {
+        title: "Ori of the Dragon Chain: Heart in the Mind",
+        image: "poze/ori_cover.jpg",
+        link: "pagini/ori_dragon/ori_dragon_detalii.html"
+      },
+      {
+        title: "Ragna Crimson",
+        image: "poze/ragna_crimson_cover.jpg",
+        link: "pagini/ragna_crimson/ragna_crimson_detalii.html"
+      },
+      {
+        title: "Shinobi no Ittoki",
+        image: "poze/shinobi_no_ittoki_cover.jpg",
+        link: "pagini/shinobi_no_ittoki/shinobi_no_ittoki_detalii.html"
+      },
+      {
+        title: "Tokyo Revengers",
+        image: "poze/tokyo_revengers.png",
+        link: "pagini/tokyo_revengers/tokyo_revengers_detalii.html"
+      },
+      {
+        title: "Trigun Stampede",
+        image: "poze/trigun_stampede_cover.jpg",
+        link: "pagini/trigun_stampede/trigun_stampede_detalii.html"
+      },
+      {
+        title: "Vagabond",
+        image: "poze/vagabond_cover.jpg",
+        link: "pagini/vagabond/vagabond_detalii.html"
+      },
+      {
+        title: "Vinland Saga Season 1",
+        image: "poze/vinland_s1_cover.jpg",
+        link: "pagini/vinland_saga_s1/vinland_saga_s1_detalii.html"
+      }
+    ];
+
+    var filteredResults = results.filter(function(result) {
+      return result.title.toLowerCase().includes(searchValue);
+    });
+
+    searchResultsList.innerHTML = "";
+
+    if (filteredResults.length > 0) {
+      filteredResults.forEach(function(result) {
+        var searchItem = document.createElement("li");
+
+        var thumbnail = document.createElement("img");
+        thumbnail.src = result.image;
+        thumbnail.alt = result.title;
+
+        var resultDetails = document.createElement("div");
+        resultDetails.classList.add("result-details");
+
+        var resultTitle = document.createElement("div");
+        resultTitle.classList.add("result-title");
+        resultTitle.textContent = result.title;
+
+
+        var resultLink = document.createElement("a");
+        resultLink.classList.add("result-link");
+        resultLink.href = result.link;
+
+        resultDetails.appendChild(resultTitle);
+        searchItem.appendChild(thumbnail);
+        searchItem.appendChild(resultDetails);
+        searchItem.appendChild(resultLink);
+
+        searchItem.addEventListener("click", function() {
+          window.location.href = result.link;
+        });
+
+        searchResultsList.appendChild(searchItem);
+      });
+    } else {
+      searchResultsList.innerHTML = "<li>Niciun rezultat găsit.</li>";
+    }
+  } else {
+    searchResultsList.innerHTML = "";
+  }
+}
+
+var searchForm = document.querySelector(".search-form");
+searchForm.addEventListener("submit", performSearch);
+
+searchInput.addEventListener("input", function() {
+  performSearch(event);
+});
+
+document.addEventListener("click", function(event) {
+  var target = event.target;
+  if (!searchBar.contains(target) && !searchButton.contains(target)) {
+    searchBar.style.display = "none";
+  }
+});
+          </script>
+
+        <script>
+            function toggleMenu() {
+              var menuContainer = document.querySelector('.menu-container');
+              document.body.classList.toggle('menu-open'); // Adaugă/elimină clasa "menu-open" la body pentru a deschide/închide meniul
+            }
+          </script>
+    <!--Main-->
+<BR><BR><BR><BR><BR>
+    <div class="top-main top-container">
+        <div id="top-main" class="swiper-container">
+            <div class="swiper-wrapper">
+
+          <div class="swiper-slide swipe-item">
+                    <div class="swiper-info">
+                        <h2 class="titlu-swipe">Demon Slayer S1                        </h2>
+                        <div class="swipe-descriere">
+                        De la moartea tatălui său, povara susținerii familiei a căzut pe umerii lui Tanjirou Kamado. Deși trăiesc în sărăcie pe un munte îndepărtat, familia Kamado reușește să se bucure de o viață relativ liniștită și fericită. Într-o zi, Tanjirou decide să meargă în satul local pentru a face niște bani din vânzarea de cărbuni...                        </div>
+                        <div class="swipe-action">
+                            <a href="pagini/demon_slayer_s1/demon_slayer_s1_detalii.php" class="btn-swipe play btn-principal">
+                                <span class="play-icon"><i class="fas fa-play"></i></span>
+                                Vizionează Acum                            </a>
+                        </div>
+                    </div>
+                    <div class="swipe-img">
+                        <div style="background-image: url(poze/demon_slayer_anime_s1_v2.png);"></div>
+                    </div>
+                </div>      
+
+                <div class="swiper-slide swipe-item">
+                    <div class="swiper-info">
+                        <h2 class="titlu-swipe">Gachiakuta</h2>
+                        <div class="swipe-descriere">
+                        Trăind în mahalaua unui oraș bogat, Rudo și tatăl său adoptiv Legto încearcă să coexiste cu restul locuitorilor orașului, dar Rudo disprețuiește...                                    </p>
+                        </div>
+                        <div class="swipe-action">
+                            <a href="pagini/gachiakuta/gachiakuta_detalii.php" class="btn-swipe play btn-principal">
+                                <span class="play-iconn"></span>Citește Acum
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swipe-img">
+                        <div style="background-image: url(poze/gachiakuta3.png);"></div>
+                    </div>
+                </div> 
+            </div>
+            </div>
+        </div>
+
+
+    <section class="main">
+        <div class="container-main">
+            <div class="row-main">
+                <div class="main-stanga">
+                    <div class="trending">
+                        <div class="row-main">
+                            <div class="titlu-trend">
+                                <h4>În Trend Acum</h4>
+                            </div>
+                        </div>
+                        <div class="row-manga">
+                        <article class="element item">
+                            <div class="tag" data-type="Anime">Anime</div><a href="pagini/one_piece_red/one_piece_red_detalii.html">
+
+                             <img
+                                class="poza_item"
+                                src="poze/one_piece_red.png"
+                                alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                                width="1920"
+                                height="2193"
+                            />
+                            <div class="card__content | flow">
+                            <div class="card__content--container | flow">
+                            <h2 class="card__title">One Piece: Red</h2>
+                            <p class="card__description">
+                            În copilărie, Uta - fosta muziciană a Piraților cu Părul Roșu și prietena din copilărie a lui Monkey D. Luffy...
+                            </p>
+                            </div></a>
+                            <button class="card__button">MAI MULT</button>
+                            </div>
+                        </article>
+                        <article class="element item">
+                            <div class="tag" data-type="Anime">Anime</div><a href="pagini/gachiakuta/gachiakuta_detalii.html">
+
+                             <img
+                                class="poza_item"
+                                src="poze/gachiakuta_logo.jpg"
+                                alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                                width="1920"
+                                height="2193"
+                            />
+                            <div class="card__content | flow">
+                            <div class="card__content--container | flow">
+                            <h2 class="card__title">Gachiakuta</h2>
+                            <p class="card__description">
+                            Trăind în mahalaua unui oraș bogat, Rudo și tatăl său adoptiv Legto încearcă să coexiste cu restul locuitorilor orașului, dar Rudo disprețuiește risipa clasei superioare.                                    </p>
+                            </div>
+                            <button class="card__button" href="">MAI MULT</button></a>
+                            </div>
+                        </article>
+                        <article class="element item">
+                            <div class="tag" data-type="Anime">Anime</div><a href="pagini/tokyo_revengers/tokyo_revengers_detalii.html">
+
+                             <img
+                                class="poza_item"
+                                src="poze/tokyo_revenger.jpg"
+                                alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                                width="1920"
+                                height="2193"
+                            />
+                            <div class="card__content | flow">
+                            <div class="card__content--container | flow">
+                            <h2 class="card__title">Tokyo Revengers</h2>
+                            <p class="card__description">
+                            Viața lui Takemichi Hanagaki este la pământ. Tocmai când credea că mai rău de atât nu se poate, află că Hinata Tachibana...
+                            </p>
+                            </div></a>
+                            <button class="card__button">MAI MULT</button>
+                            </div>
+                        </article>
+                        </div>
+                        <div class="row-main"></div>
+                    </div>
+                    <div class="pupular">
+                        <div class="row-main">
+                            <div class="titlu-trend">
+                                <h4>Popular</h4>
+                            </div>
+                        </div>
+                        <div class="row-manga">
+                        <article class="element item">
+                            <div class="tag" data-type="Manga">Manga</div><a href="pagini/ao_ashi/ao_ashi_detalii.html">
+
+                             <img
+                                class="poza_item"
+                                src="poze/ao_ashi4.jpg"
+                                alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                                width="1920"
+                                height="2193"
+                            />
+                            <div class="card__content | flow">
+                            <div class="card__content--container | flow">
+                            <h2 class="card__title">Ao Ashi</h2>
+                            <p class="card__description">
+                            Ashito Aoi, un elev de gimnaziu din Ehime, aflat în al treilea an, îl întâlnește pe Tatsuya Fukuda, un antrenor...                                    </p>
+                            </div></a>
+                            <button class="card__button">MAI MULT</button>
+                            </div>
+                        </article>
+                        <article class="element item">
+                            <div class="tag" data-type="Anime">Anime</div><a href="pagini/cyberpunk_edgerunners/cyberpunk_edgerunners_detalii.html">
+
+                             <img
+                                class="poza_item"
+                                src="poze/cyberpunk_cover.jpg"
+                                alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                                width="1920"
+                                height="2193"
+                            />
+                            <div class="card__content | flow">
+                            <div class="card__content--container | flow">
+                            <h2 class="card__title">Cyberpunk Edgerunners</h2>
+                            <p class="card__description">
+                            Visele sunt condamnate să moară în Night City, o metropolă californiană futuristă. Ca adolescent care trăiește...                                    </p> 
+                            </div></a>
+                            <button class="card__button">MAI MULT</button>
+                            </div>
+                        </article>
+                        <article class="element item">
+                            <div class="tag" data-type="Anime">Anime</div><a href="pagini/shinobi_no_ittoki/shinobi_no_ittoki_detalii.html">
+
+                             <img
+                                class="poza_item"
+                                src="poze/shinobi_no_ittoki_cover.jpg"
+                                alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                                width="1920"
+                                height="2193"
+                            />
+                            <div class="card__content | flow">
+                            <div class="card__content--container | flow">
+                            <h2 class="card__title">Shinobi no Ittoki</h2>
+                            <p class="card__description">
+                            Ittoki Sakuraba nu reușește să înțeleagă de ce mama sa, unchiul său și prietenul său din copilărie, Kousetsu, par să ia atât...                                 </p>
+
+                            </div></a>
+                            <button class="card__button">MAI MULT</button>
+                            </div>
+                        </article>
+                        <article class="element item">
+                            <div class="tag" data-type="Anime">Anime</div><a href="pagini/ragna_crimson/ragna_crimson_detalii.html">
+
+                             <img
+                                class="poza_item"
+                                src="poze/ragna_crimson_cover.jpg"
+                                alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                                width="1920"
+                                height="2193"
+                            />
+                            <div class="card__content | flow">
+                            <div class="card__content--container | flow">
+                            <h2 class="card__title">Ragna Crimson</h2>
+                            <p class="card__description">
+                            Într-o lume în care dragonii stăpânesc cerul, marea și pământul, cei care vor să se lupte cu ei și să câștige trebuie...
+                            </div></a>
+                            <button class="card__button">MAI MULT</button>
+                            </div>
+                        </article>
+                        <article class="element item">
+                            <div class="tag" data-type="Anime">Anime</div><a href="pagini/trigun_stampede/trigun_stampede_detalii.html">
+
+                             <img
+                                class="poza_item"
+                                src="poze/trigun_stampede_cover.jpg"
+                                alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                                width="1920"
+                                height="2193"
+                            />
+                            <div class="card__content | flow">
+                            <div class="card__content--container | flow">
+                            <h2 class="card__title">Trigun Stampede</h2>
+                            <p class="card__description">
+                            Pe planeta Noman, reporterii Meryl Stryfe și Roberto De Niro traversează deșertul în căutarea infamului infractor Vash the Stampede...                                   </p>
+                            </div></a>
+                            <button class="card__button">MAI MULT</button>
+                            </div>
+                        </article>
+                        <article class="element item">
+                            <div class="tag" data-type="Manga">Manga</div><a href="pagini/kagurabachi/kagurabachi_detalii.html">
+
+                             <img
+                                class="poza_item"
+                                src="poze/kagurabachi_cover.jpg"
+                                alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                                width="1920"
+                                height="2193"
+                            />
+                            <div class="card__content | flow">
+                            <div class="card__content--container | flow">
+                            <h2 class="card__title">Kagurabachi </h2>
+                            <p class="card__description">
+                            Tânărul Chihiro își petrece zilele antrenându-se sub îndrumarea faimosului său tată spadasin. Într-o zi speră să devină el însuși un mare fabricant de săbii...                                    </p>
+                            </div></a>
+                            <button class="card__button">MAI MULT</button>
+                            </div>
+                        </article>
+                            
+
+                        </div>
+                    </div>
+                    <div class="recent">
+                        <div class="row-main">
+                            <div class="titlu-trend">
+                                <h4>Restul</h4>
+                            </div>
+                            <div class="mai-mult">
+                                <div class="btn-mai-mult">
+                                    <a href="mai_mult.php" class="btn-mult">
+                                        Mai Multe ->
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-manga">
+                        <article class="element item">
+                            <div class="tag" data-type="Manga">Manga</div><a href="pagini/ori_dragon/ori_dragon_detalii.html">
+
+                             <img
+                                class="poza_item"
+                                src="poze/ori_cover.jpg"
+                                alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                                width="1920"
+                                height="2193"
+                            />
+                            <div class="card__content | flow">
+                            <div class="card__content--container | flow">
+                            <h2 class="card__title">Ori of the Dragon Chain</h2>
+                            <p class="card__description">
+                            Academia Solminati este o școală de prestigiu care adăpostește visele și speranțele studenților ambițioși...
+                            </p>
+                            </div></a>
+                            <button class="card__button">MAI MULT</button>
+                            </div>
+                        </article>
+                        <article class="element item">
+                            <div class="tag" data-type="Manga">Manga</div><a href="pagini/blue_lock/blue_lock_detalii.html">
+
+                             <img
+                                class="poza_item"
+                                src="poze/blue_lock_cover.jpg"
+                                alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                                width="1920"
+                                height="2193"
+                            />
+                            <div class="card__content | flow">
+                            <div class="card__content--container | flow">
+                            <h2 class="card__title">Blue Lock</h2>
+                            <p class="card__description">
+                            După ce reflectează asupra stării actuale a fotbalului japonez, Asociația Japoneză de Fotbal decide să-l angajeze pe enigmaticul și excentricul antrenor Jinpachi Ego pentru...
+                            </div></a>
+                            <button class="card__button">MAI MULT</button>
+                            </div>
+                        </article>
+                        <article class="element item">
+                            <div class="tag" data-type="Anime">Anime</div><a href="pagini/vinland_saga_s1/vinland_saga_s1_detalii.html">
+
+                             <img
+                                class="poza_item"
+                                src="poze/vinland_s1_cover.jpg"
+                                alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                                width="1920"
+                                height="2193"
+                            />
+                            <div class="card__content | flow">
+                            <div class="card__content--container | flow">
+                            <h2 class="card__title">Vinland Saga <br>Season 1</h2>
+                            <p class="card__description">
+                            Tânărul Thorfinn a crescut ascultând poveștile vechilor marinari care au călătorit pe ocean și au ajuns în locul de legendă, Vinland.
+                            </p>
+                            </div></a>
+                            <button class="card__button">MAI MULT</button>
+                            </div>
+                        </article>
+                        <article class="element item">
+                            <div class="tag" data-type="Anime">Anime</div><a href="pagini/demon_slayer_s1/demon_slayer_s1_detalii.html">
+
+                             <img
+                                class="poza_item"
+                                src="poze/demon_slayer_s1_cover.jpg"
+                                alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                                width="1920"
+                                height="2193"
+                            />
+                            <div class="card__content | flow">
+                            <div class="card__content--container | flow">
+                            <h2 class="card__title">Demon Slayer Season 1</h2>
+                            <p class="card__description">
+                            De la moartea tatălui său, povara susținerii familiei a căzut pe umerii lui Tanjirou Kamado. Deși trăiesc...                                    </p>
+                            </div></a>
+                            <button class="card__button">MAI MULT</button>
+                            </div>
+                        </article>
+                        <article class="element item">
+                            <div class="tag" data-type="Anime">Anime</div><a href="pagini/engage_kiss/engage_kiss_detalii.html">
+
+                             <img
+                                class="poza_item"
+                                src="poze/engage_kiss_cover.png"
+                                alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                                width="1920"
+                                height="2193"
+                            />
+                            <div class="card__content | flow">
+                            <div class="card__content--container | flow">
+                            <h2 class="card__title">Engage Kiss</h2>
+                            <p class="card__description">
+                            Bayron City, o metropolă de pionierat construită pe o sursă de energie recent descoperită, promite fiecărui cetățean un stil de viață luxos și confortabil...          
+                            </p>
+                            </div></a>
+                            <button class="card__button">MAI MULT</button>
+                            </div>
+                        </article>
+                        <article class="element item">
+                            <div class="tag" data-type="Anime">Anime</div><a href="pagini/mha_s6/mha_s6_detalii.html">
+
+                             <img
+                                class="poza_item"
+                                src="poze/my_hero_s6_cover.jpg"
+                                alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                                width="1920"
+                                height="2193"
+                            />
+                            <div class="card__content | flow">
+                            <div class="card__content--container | flow">
+                            <h2 class="card__title">My Hero Academia Season 6</h2>
+                            <p class="card__description">
+                            Cu Tomura Shigaraki la conducere, fosta Armată de Eliberare este acum cunoscută sub numele de Frontul...                                    </p>
+                            </div></a>
+                            <button class="card__button">MAI MULT</button>
+                            </div>
+                        </article>
+
+                            
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="main-dreapta">
+                    <div class="recent">
+                        <div class="titlu-rec">
+                            <h5>ÎNCEARCĂ NOROCUL</h5>
+                        </div>
+                        <!-- Element imagine care acționează ca "Deschide Cufăr" -->
+
+    <style>
+                #container-chest {
+            text-align: center;
+            margin-top: 50px;
+            width: 100px;
+
+        }
+
+        #chestNotification {
+    display: none;
+    background-color: #ffd700;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    position: fixed;  /* Poziționează notificarea fix în cadrul ecranului */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  /* Centrează notificarea */
+    z-index: 9999;  /* Setează z-index la o valoare mare pentru a asigura suprapunerea peste alte elemente */
+}
+
+
+        .open-chest-img {
+            width: 100%; /* Asigură că imaginea cufărului deschis ocupă întreaga lățime */
+        }
+
+        .chest-img {
+            width: 300px;
+            margin-left: 85px;
+            height: 300px;
+        }
+
+        #timerContainer {
+            margin-top: 10px;
+        }
+        .modal{
+            z-index: 9999;
+        }
+
+    </style>
+                <div id="notification"></div>
+
+<!-- Element imagine care acționează ca "Deschide Cufăr" -->
+<div id="container-chest">
+        <img src="poze/chest_inchis2.png" alt="Cufăr" id="openChestImg" onclick="openChest()" style="width: 250px; height: 250px;">
+        <div id="timerContainer">
+            <span id="timer"></span>
+        </div>
+    </div>
+    
+    <!-- Modal pentru notificare -->
+    <div class="modal fade" id="chestModal" tabindex="-1" role="dialog" aria-labelledby="chestModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document" style="margin-top: 55px">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="chestModalLabel">Cufărul cu Monede</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                
+                <div class="modal-body">
+                    <img class="chest-img" src="poze/chest_deschis.png" alt="Cufăr Deschis" class="open-chest-img">
+                    <p id="notificationText" style="color: black;"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Script-uri pentru Bootstrap și scriptul JavaScript personalizat -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+
+        // Adaugă acest cod în secțiunea <script> din HTML
+var style = document.createElement('style');
+style.innerHTML = `
+/* Stilurile pentru notificare */
+    #notification {
+        display: none;
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #4CAF50;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        z-index: 9999;
+    }
+
+    /* Stil pentru a adăuga un delay de 15 secunde la notificare */
+    #notification::before {
+        content: "Trebuie să aștepți 15 secunde pentru a deschide din nou un cufăr.";
+        display: block;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+    /* Adaugă orice alte stiluri necesare */
+`;
+document.head.appendChild(style);
+
+        var canOpenChest = true; // Inițial, cufărul poate fi deschis
+        var delayDuration = 15; // Durata delay-ului în secunde
+
+        // Funcție pentru obținerea valorii timestamp-ului din Local Storage
+        function getStoredTimestamp() {
+            var storedTimestamp = localStorage.getItem('lastOpenTimestamp');
+            return storedTimestamp ? parseInt(storedTimestamp) : 0;
+        }
+
+        // Funcție pentru salvarea timestamp-ului în Local Storage
+        function setLastOpenTimestamp() {
+            var currentTimestamp = Math.floor(Date.now() / 1000);
+            localStorage.setItem('lastOpenTimestamp', currentTimestamp);
+        }
+
+        function openChest() {
+    var storedTimestamp = getStoredTimestamp();
+    var nextOpenTimestamp = storedTimestamp + delayDuration;
+    var currentTime = Math.floor(Date.now() / 1000);
+
+    if (currentTime < nextOpenTimestamp) {
+        // Utilizatorul încearcă să deschidă cufărul înainte de expirarea perioadei de așteptare
+        showNotification();
+        return;
+    }
+
+    // Salvăm timestamp-ul deschiderii
+    setLastOpenTimestamp();
+
+    // Înlocuim imaginea cu cea de cufăr deschis
+    $('#openChestImg').attr('src', 'poze/chest_deschis.png');
+
+    // Simulăm un câștig aleatoriu (poate fi personalizat în funcție de necesități)
+    var isWinner = Math.random() < 0.5; // 50% șansă de a câștiga
+
+    // Afișăm notificarea corespunzătoare în modal
+    var modal = $('#chestModal');
+    var notificationText = $('#notificationText');
+    var timer = $('#timer');
+
+    if (isWinner) {
+        notificationText.text('Ai câștigat 50 de monede!');
+        updatePoints(); // Adăugăm punctele în contul utilizatorului
+    } else {
+        notificationText.text('Nu ai câștigat nimic.');
+    }
+
+    // Deschidem modalul
+    modal.modal('show');
+
+    // Setăm un delay între deschideri
+    setTimeout(function () {
+        canOpenChest = true;
+        updateNotification(); // Actualizăm notificarea cu următorul timp disponibil
+    }, delayDuration * 1000);
+
+    // Resetăm imaginea la cufărul închis după 3 secunde
+    setTimeout(function () {
+        $('#openChestImg').attr('src', 'poze/chest_inchis2.png');
+    }, 3000);
+}
+
+
+// Funcție pentru a arăta notificarea că deja ai reward-ul
+function showNotification() {
+    $('#chestNotification').fadeIn().delay(3000).fadeOut(3000);
+}
+
+        // Funcție pentru a actualiza notificarea în funcție de timpul rămas
+        function updateNotification() {
+            var storedTimestamp = getStoredTimestamp();
+            var nextOpenTimestamp = storedTimestamp + delayDuration;
+            var currentTime = Math.floor(Date.now() / 1000);
+
+            if (currentTime < nextOpenTimestamp) {
+                var timeRemaining = nextOpenTimestamp - currentTime;
+                var minutes = Math.floor(timeRemaining / 60);
+                var seconds = timeRemaining % 60;
+
+                $('#notificationText').text('Poți deschide un nou cufăr peste ' + minutes + ' minute și ' + seconds +
+                    ' secunde.');
+                $('#notificationTimer').text(minutes + ':' + (seconds < 10 ? '0' : '') + seconds);
+                $('#chestNotification').fadeIn();
+            } else {
+                $('#chestNotification').fadeOut();
+            }
+        }
+
+        // Apelăm funcția de actualizare a notificării la încărcarea paginii
+        $(document).ready(function () {
+            updateNotification();
+        });
+
+
+        function updatePoints() {
+    // Datele pe care le trimitem către server (aici, numărul de puncte)
+    var data = { points: 50 };
+
+    // Opțiunile pentru cererea fetch
+    var options = {
+        method: 'POST', // Metoda HTTP pentru cerere
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data) // Convertim obiectul în format JSON
+    };
+
+    // Trimitem cererea către server
+    fetch('php/actualizare_puncte.php', options)
+        .then(response => response.json())
+        .then(data => {
+            // Funcție apelată la succesul cererii
+            console.log(data); // Poți afișa răspunsul serverului în consolă pentru debug
+        })
+        .catch(error => {
+            // Funcție apelată în caz de eroare
+            console.error('Error:', error); // Poți afișa eroarea în consolă pentru debug
+        });
+}
+
+        // Adăugați funcția pentru afișarea notificării
+        function showNotification(message) {
+            var notificationElement = $("#notification");
+
+            // Afișează mesajul în notificare
+            notificationElement.text(message);
+
+            // Apoi afișează notificarea pentru o scurtă perioadă de timp
+            notificationElement.fadeIn().delay(3000).fadeOut();
+        }
+    </script>
+
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+</div>
+<footer class="footer">
+    <div class="page-up">
+      <a href="#" id="scrollToTopButton">
+        <span class="arrow_carrot-up"></span>
+      </a>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="zona-stanga">
+          <div class="footer-logo">
+            <a href="start.html">
+              <img src="poze/logo_otakuro.png" class="dimensiune-poza">
+            </a>
+          </div>
+        </div>
+        <div class="zona-centru">
+          <div class="footer-nav">
+            <ul>
+              <li class="active"><a href="#">Acasă</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="zona-dreapta">
+          <p>
+            Copyright ©2024 All rights reserved | This template is made with love by Mrn
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+<script>
+    var menu = document.querySelector('.menu_site');
+var container = document.querySelector('.container');
+
+menu.addEventListener('mouseenter', function() {
+  container.classList.add('open');
+});
+
+container.addEventListener('mouseleave', function() {
+  container.classList.remove('open');
+});
+</script>   
+<script>
+    var signinContainer = document.getElementById("signin-container");
+signinContainer.addEventListener("click", function() {
+  console.log("Butonul de logare a fost apasat.");
+});
+
+</script>
+
+
+
+<!--Swipe -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+        loop: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+    });
+</script>
+
+
+
+</body>
+</html>

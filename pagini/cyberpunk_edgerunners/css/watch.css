@@ -1,0 +1,322 @@
+html, body {
+    height: 100%;
+    font-family: "Mulish", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background: #0b0c2a;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+.header__right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: 1650px;
+}
+.cion_profile{
+    font-family: 'ElegantIcons';
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+.icon_profile{
+    font-size: 35px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.breadcrumb-option {
+    padding-top: 35px;
+}
+
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+
+@media (min-width: 576px){
+.container {
+    max-width: 540px;
+}}
+
+@media (min-width: 768px){
+.container {
+    max-width: 720px;
+}}
+@media (min-width: 992px){
+.container {
+    max-width: 960px;
+}}
+@media (min-width: 1200px){
+.container {
+    max-width: 1140px;
+}}
+@media (min-width: 576px){
+.container, .container-sm {
+    max-width: 540px;
+}}
+@media (min-width: 768px){
+.container, .container-md, .container-sm {
+    max-width: 720px;
+}}
+@media (min-width: 992px){
+.container, .container-lg, .container-md, .container-sm {
+    max-width: 960px;
+}}
+@media (min-width: 1200px){
+.container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1140px;
+}}
+@media only screen and (min-width: 1200px){
+.container {
+    max-width: 1170px;
+}}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.zona-title{
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+@media (min-width: 992px){
+    .zona-title{
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+.breadcrumb__links a {
+    font-size: 15px;
+    color: #ffffff;
+    margin-right: 18px;
+    display: inline-block;
+    position: relative;
+}
+
+.breadcrumb__links span {
+    font-size: 15px;
+    color: #b7b7b7;
+    display: inline-block;
+}
+.breadcrumb__links a:after {
+    position: absolute;
+    right: -14px;
+    top: 0;
+    content: "";
+    font-family: "FontAwesome";
+}
+
+
+/* Sectiune Video si Episoade */
+
+.spad {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.anime-details {
+    padding-top: 60px;
+}
+.centru{
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px
+}
+@media (min-width: 992px){
+.centru {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}}
+
+.anime_video_player{
+    margin-bottom: 70px;
+}
+
+.detalii-anime{
+    margin-bottom: 35px;
+}
+.sectiune-titlu {
+    margin-bottom: 30px;
+}
+
+.sectiune-titlu h5 {
+    color: #ffffff;
+    font-weight: 600;
+    line-height: 21px;
+    text-transform: uppercase;
+    padding-left: 20px;
+    position: relative;
+    font-family: "Oswald", sans-serif;
+}
+.sectiune-titlu h5:after{
+    position: absolute;
+    left: 0;
+    top: -6px;
+    height: 32px;
+    width: 4px;
+    background: #1040c7;
+    content: "";
+}
+
+.detalii-anime a {
+    display: inline-block;
+    font-size: 15px;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin-right: 15px;
+    margin-bottom: 20px;
+    -webkit-transition: all, 0.3s;
+    -o-transition: all, 0.3s;
+    transition: all, 0.3s;
+}
+.detalii-anime a:hover{
+    background-color: #007bff;
+}
+
+/* Footer */
+.footer {
+    background: #070720;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    position: relative;
+    display: block;
+}
+.page-up {
+    position: absolute;
+    left: 50%;
+    top: -25px;
+    margin-left: -25px;
+}
+.page-up a {
+    display: inline-block;
+    font-size: 36px;
+    color: #ffffff;
+    height: 50px;
+    width: 50px;
+    background: #007bff;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+}
+.page-up a span {
+    position: relative;
+    top: 6px;
+}
+
+.zona-stanga, .zona-centru, .zona-dreapta {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+@media (min-width: 992px){
+.zona-stanga {
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+}}
+@media (min-width: 992px){
+.zona-centru {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}}
+@media (min-width: 992px){
+.zona-dreapta {
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+}}
+
+
+@media only screen and (max-width: 479px){
+    .footer__nav {
+		margin-bottom: 10px;
+	}
+}
+
+@media only screen and (max-width: 767px){
+.footer-logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.footer-nav {
+    margin-bottom: 15px
+}
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+.footer-logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.footer__nav {
+    margin-bottom: 15px;
+}
+}
+
+.dimensiune-poza{
+    width: 111px;
+    height: 50px;
+}
+
+.footer-nav {
+    text-align: center;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+.footer-nav ul li {
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    margin-right: 40px;
+}
+
+.footer-nav ul li a {
+    font-size: 15px;
+    color: #b7b7b7;
+    display: block;
+    font-weight: 700;
+}
+
+p {
+    font-size: 15px;
+    font-family: "Mulish", sans-serif;
+    color: #3d3d3d;
+    font-weight: 400;
+    line-height: 25px;
+    margin: 0 0 15px 0;
+}

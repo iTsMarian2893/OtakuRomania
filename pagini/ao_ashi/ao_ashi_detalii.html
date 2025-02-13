@@ -1,0 +1,167 @@
+<html>
+<head>
+
+    <title>Ao Ashi</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/start.css">
+    <link rel="stylesheet" href="css/read.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/ao_detalii.css">
+    <link rel="stylesheet" href="css/header.css">
+    <script src="scripts/menu.js"></script>
+
+
+</head>
+<body>
+        <!--Header-->
+        <header id="headerr">
+            <div id="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+            <div class="menu-container">
+              <div class="close-menu" onclick="toggleMenu()">Închide Meniu</div>
+              <BR><BR><BR>
+              <ul class="menu-list">
+              <li class="nav-item"><a href="../../main.html" class="nav-link">Acasă</a></li>
+                <li class="nav-item"><a href="../../mai_mult.html" class="nav-link">Mai Mult</a></li>
+                <li class="nav-item"><a href="../../contact.html" class="nav-link">Contact</a></li>
+              </ul>
+            </div>
+            <a href="../../main.html" class="logo-header">OtakuRo</a>
+        </header>
+
+        <br><BR><BR><BR>
+
+
+
+        <!--Sectiune Detalii Manga-->
+        <section class="sectiune-manga">
+            <div id="background">
+                <div id="cover"></div>
+            </div>
+            <div class="container-manga">
+                <div class="detalii-manga">
+                    <div class="row-manga">
+                        <div class="poza-manga">
+                            <div class="manga-poza set-bg" style="background-image: url('poze/ao_ashi4.jpg')">
+                            </div>
+                        </div>
+                        <div class="content-manga"> 
+                            <div class="detalii-text-manga">
+                                <div class="titlu">
+                                    <h3>Ao Ashi	</h3>
+                                    <span>アオアシ</span>
+                                </div>
+                                <div class="container-desc">
+                                    <p class="text-desc">Ashito Aoi, o elevă de gimnaziu în anul trei din Ehime, îl întâlnește pe Tatsuya Fukuda, un antrenor din "J Youth League". Chiar dacă este încă neîndemânatic, Ashito are un potențial atât de uimitor încât este invitat de antrenorul Fukuda să participe la probele echipei sale din Tokyo. Povestea băiatului care va revoluționa fotbalul din Japonia începe să se desfășoare.</p>
+                                </div>
+                                <div class="info-bg">
+                                <div class="info">
+                                    <span class="info-stanga">Capitole:</span>
+                                    <span class="info-dreapta">5</span>
+                                </div>
+                                <div class="info">
+                                    <span class="info-stanga">Volume:</span>
+                                    <span class="info-dreapta">Necunoscut</span>
+                                </div>
+                                <div class="info">
+                                    <span class="info-stanga">Status:</span>
+                                    <span class="info-dreapta">Completă</span>
+                                </div>
+                                <div class="info">
+                                    <span class="info-stanga">Aparitie:</span>
+                                    <span class="info-dreapta">Jan. 5, 2015</span>
+                                </div>
+                                <div class="info">
+                                    <span class="info-stanga">Autor:</span>
+                                    <span class="info-dreapta">Naohiko Ueno</span>
+                                </div>
+                                <div class="info">
+                                    <span class="info-stanga">Art:</span>
+                                    <span class="info-dreapta">Yugo Kobayashi</span>
+                                </div>
+                                <div class="info linii-cat">
+                                    <span class="info-stanga"></span>
+                                    <a>Sport</a>
+                                    <a>Comedie</a>
+                                    <a>Drama</a>
+                                </div>
+
+                                </div>
+                                <div class="manga-btn">
+                                    <a href="cap1.html" class="citeste-btn"><span>Citește</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <br><br><br><br>
+           <!--Secitiunea de Review si de Altele-->
+           <section class="row-manga">
+                        <div class="review">
+                            <div class="publica-rev">
+                                <div class="titlu-ra">
+                                    <h5>Recenzia ta</h5>
+                                </div>
+                                <form id="reviewForm" onsubmit="postReview(); return false;">
+                                    <input type="text" id="reviewText" placeholder="Scrie ceva interesant" class="text-input" required>
+                                    <button type="submit">PUBLICĂ</button>
+                                </form>
+                            </div>
+                            <br><br>
+                            <div class="alte-rev">
+                                <div class="titlu-ra">
+                                    <h5>Alte Recenzii</h5>
+                                </div>
+                                <div class="item-re">
+                                <div class="avatar-re">
+                                    <img src="poze/kirito_avatar.png" alt="Avatar utilizator">
+                                </div>
+                                </div>
+                                    <div class="container-text">
+                                        <h6>Marian</h6>
+                                        <p>Este geniala aceata manga! 10/10</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="altele">
+                            <div class="rec-manga">
+                                <div class="titlu-ra">
+                                    <h5>S-ar putea să-ți placă și...</h5>
+                                </div>
+                                <div class="image-container">
+                                    <a href="../ori_dragon/ori_dragon_detalii.html" class="image-link">
+                                      <div class="image" style="background-image: url('poze/ori_cover.jpg')"></div>
+                                      <div class="text-overlay">
+                                        <h2 class="text">Ori of the Dragon Chain: "Heart" in the Mind</h2>
+                                      </div>
+                                    </a>
+                                  </div>
+                                <div class="image-container">
+                                    <a href="../one_piece_red/one_piece_red_detalii.html" class="image-link">
+                                      <div class="image" style="background-image: url('poze/one_piece_red.jpg')"></div>
+                                      <div class="text-overlay">
+                                        <h2 class="text">One Piece Film: Red</h2>
+                                      </div>
+                                    </a>
+                                  </div> 
+                                <div class="image-container">
+                                    <a href="../tokyo_revengers/tokyo_revengers_detalii.html" class="image-link">
+                                      <div class="image" style="background-image: url('poze/tokyo_revengers.png')"></div>
+                                      <div class="text-overlay">
+                                        <h2 class="text">Tokyo Revengers</h2>
+                                      </div>
+                                    </a>
+                                  </div>
+                            </div>
+                        </div>
+                    </section>
+
+</body>
+</html>

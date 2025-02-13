@@ -1,0 +1,149 @@
+<html>
+<head>
+	<title>Autentificare</title>
+	<link rel="stylesheet" type="text/css" href="login_regis.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body  style="background-image: url(poze/bg_blurat.jpg);">
+            <header id="headerr">
+                <div class="logo-menu">
+                    <div id="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+                    <div class="menu-container">
+                        <div class="close-menu" onclick="toggleMenu()">Închide Meniu</div>
+                        <BR><BR><BR>
+                        <ul class="menu-list">
+                          <li class="nav-item"><a href="main.html" class="nav-link">Acasă</a></li>
+                          <li class="nav-item"><a href="mai_mult.html" class="nav-link">Mai Mult</a></li>
+                          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                        </ul>
+                      </div>
+                      <a href="start.html" class="logo-header">OtakuRo</a>
+                </div>
+            </header>
+
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="#" method="post" class="login">
+                <h1>Crează un cont</h1>
+                <br><br>
+                <div class="text-input">
+                    <label for="signup-username"></label>
+                    <i class="ri-user-fill"></i>
+                    <input placeholder="Nume utilizator" type="text" id="signup-username" name="username" required>
+                </div>
+                
+                <div class="text-input">
+                    <label for="email"></label>
+                    <i class="ri-mail-fill"></i>
+                    <input placeholder="Email" type="text" id="email" name="email" required>
+                </div>
+                <div class="text-input">
+                    <label for="signup-password"></label>
+                    <i class="ri-lock-fill"></i>
+                    <input placeholder="Parola" type="password" id="signup-password" name="password" required>
+                </div>
+                <br><br>
+                <input type="submit" value="Înregistrare" class="login-btn"></button>
+                <style>
+                    .login-btn{
+                        border-radius: 20px;
+                        border: 1px solid #00d3ff;
+                        background-color: #00d3ff;
+                        color: #FFFFFF;
+                        font-size: 12px;
+                        font-weight: bold;
+                        padding: 12px 45px;
+                        letter-spacing: 1px;
+                        text-transform: uppercase;
+                        transition: transform 80ms ease-in;
+                    }
+                </style>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+        <form action="#" method="post" class="login">
+                <h1>Login</h1>
+                <br><br>
+                <div class="text-input">
+                    <label for="username"></label>
+                    <i class="ri-user-fill"></i>
+                    <input type="text" id="username" placeholder="Nume utilizator" name="username" required>
+                </div>
+                <div class="text-input">
+                    <label for="password"></label>
+                    <i class="ri-lock-fill"></i>
+                    <input type="password" id="password" placeholder="Parola" name="password" required>
+                </div>
+                <br><br>
+                <button class="login-btn">Autenficare</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Bine ai venit!</h1>
+                    <p>Pentru a face parte din comunitatea noastră și să beneficiați de anumite lucruri, vă invităm să vă creați un cont!</p>
+                    <button class="ghost" id="signIn">Autentificare</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Bine ai venit!</h1>
+                    <p>Introduceți datele pentru a intra în cont!</p>
+                    <button class="ghost" id="signUp">Înregistrare</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script>
+        const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('container');
+
+signUpButton.addEventListener('click', () => {
+	container.classList.add("right-panel-active");
+});
+
+signInButton.addEventListener('click', () => {
+	container.classList.remove("right-panel-active");
+});
+    </script>
+            <script>
+            function toggleMenu() {
+              var menuContainer = document.querySelector('.menu-container');
+              document.body.classList.toggle('menu-open'); // Adaugă/elimină clasa "menu-open" la body pentru a deschide/închide meniul
+            }
+          </script> 
+
+<script>
+function setLoggedIn(username) {
+    var authButtons = document.getElementById('authButtons');
+    var userBtn = document.getElementById('userBtn');
+
+    if (authButtons) {
+        authButtons.style.display = 'none';
+    }
+
+    if (userBtn) {
+        userBtn.style.display = 'block';
+        userBtn.innerHTML = `<button onclick="showUserData('${username}')" class="auth-btn">${username}</button>`;
+    }
+}
+
+function showUserData(username) {
+    window.location.href = `user_data.php?username=${username}`;
+}
+</script>
+
+<?php
+
+
+if (isset($_SESSION['username'])) {
+    echo '<script>setLoggedIn("' . $_SESSION['username'] . '");</script>';
+}
+?>
+
+</body>
+</html>

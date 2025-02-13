@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/pg_read.css">
+</head>
+<body>
+    <div id="header">
+        <div id="logo">
+            <div>
+                <a href="../../main.html">
+                    <img src="poze/logo_otakuro.png" alt="Logo">
+                </a>
+            </div>
+        </div>
+        <div class="hr-line"></div>
+        <div>
+            <h2>
+                <a href="../blue_lock/blue_lock_detalii.html" class="chapter-title">Blue Lock</a>
+            </h2>
+        </div>
+        <button id="expandButton" onclick="expandHeader()"><span id="chapterNumber" >Capitolul 1</span></button>
+        <div id="chapterContainer">
+            <ul class="chapter-list">
+                <li onclick="goToChapter(1)">Capitolul 1</li>
+                <li onclick="goToChapter(2)">Capitolul 2</li>
+                <li onclick="goToChapter(3)">Capitolul 3</li>
+            </ul>
+        </div>
+        <div id="chapterNav">
+            <button id="previousChapterButton" onclick="goToPreviousChapter()"><span>&#8592;</span></button>
+            <button id="nextChapterButton" onclick="goToNextChapter()"><span>&#8594;</span></button>
+        </div>
+    </div>
+
+    <div id="content">
+        <h1 id="chapterNumber"></h1>
+        <div class="chapter-images">
+            <div class="loading-indicator"></div>
+        </div>
+    </div>
+    <script>
+        function expandHeader() {
+    header.classList.toggle("expanded");
+    chapterContainer.style.display = header.classList.contains("expanded") ? "block" : "none";
+}
+var chapters = [
+    {
+        name: "Capitolul 1",
+        images: [ "capitole/cap1/pg2.jpg", "capitole/cap1/pg3.jpg", "capitole/cap1/pg4.jpg", "capitole/cap1/pg5.jpg",
+                 "capitole/cap1/pg6.jpg", "capitole/cap1/pg7.jpg", "capitole/cap1/pg8.jpg", "capitole/cap1/pg9.jpg", "capitole/cap1/pg10.jpg",
+                 "capitole/cap1/pg11.jpg", "capitole/cap1/pg12.jpg", "capitole/cap1/pg13.jpg", "capitole/cap1/pg14.jpg", "capitole/cap1/pg15.jpg",
+                 "capitole/cap1/pg16.jpg", "capitole/cap1/pg17.jpg", "capitole/cap1/pg18.jpg", "capitole/cap1/pg19.jpg", "capitole/cap1/pg20.jpg",
+                 "capitole/cap1/pg21.jpg", "capitole/cap1/pg22.jpg", "capitole/cap1/pg23.jpg", "capitole/cap1/pg24.jpg", "capitole/cap1/pg25.jpg",
+                 "capitole/cap1/pg26.jpg", "capitole/cap1/pg27.jpg", "capitole/cap1/pg28.jpg", "capitole/cap1/pg29.jpg", "capitole/cap1/pg30.jpg",
+                 "capitole/cap1/pg31.jpg", "capitole/cap1/pg32.jpg", "capitole/cap1/pg33.jpg", "capitole/cap1/pg34.jpg", "capitole/cap1/pg35.jpg",
+                 "capitole/cap1/pg36.jpg", "capitole/cap1/pg37.jpg", "capitole/cap1/pg38.jpg", "capitole/cap1/pg39.jpg", "capitole/cap1/pg40.jpg",
+                 "capitole/cap1/pg41.jpg", "capitole/cap1/pg42.jpg", "capitole/cap1/pg43.jpg", "capitole/cap1/pg44.jpg", "capitole/cap1/pg45.jpg",
+                 "capitole/cap1/pg46.jpg", "capitole/cap1/pg47.jpg", "capitole/cap1/pg48.jpg", "capitole/cap1/pg49.jpg", "capitole/cap1/pg50.jpg",
+                 "capitole/cap1/pg51.jpg", "capitole/cap1/pg52.jpg", "capitole/cap1/pg53.jpg", "capitole/cap1/pg54.jpg", "capitole/cap1/pg55.jpg",
+                 "capitole/cap1/pg56.jpg", "capitole/cap1/pg57.jpg", "capitole/cap1/pg58.jpg", "capitole/cap1/pg59.jpg", "capitole/cap1/pg60.jpg",
+                 "capitole/cap1/pg61.jpg", "capitole/cap1/pg62.jpg", "capitole/cap1/pg63.jpg", "capitole/cap1/pg64.jpg", "capitole/cap1/pg65.jpg",
+                 "capitole/cap1/pg66.jpg", "capitole/cap1/pg67.jpg", "capitole/cap1/pg68.jpg", "capitole/cap1/pg69.jpg", "capitole/cap1/pg70.jpg",
+                 "capitole/cap1/pg71.jpg", "capitole/cap1/pg72.jpg", "capitole/cap1/pg73.jpg", "capitole/cap1/pg74.jpg", "capitole/cap1/pg75.jpg"
+                ]
+    },
+    {
+        name: "Capitolul 2",
+        images: ["capitole/cap2/pg1.jpg", "capitole/cap2/pg2.jpg", "capitole/cap2/pg3.jpg", "capitole/cap2/pg4.jpg", "capitole/cap2/pg5.jpg",
+                 "capitole/cap2/pg6.jpg", "capitole/cap2/pg7.jpg", "capitole/cap2/pg8.jpg", "capitole/cap2/pg9.jpg", "capitole/cap2/pg10.jpg",
+                 "capitole/cap2/pg11.jpg", "capitole/cap2/pg12.jpg", "capitole/cap2/pg13.jpg", "capitole/cap2/pg14.jpg", "capitole/cap2/pg15.jpg",
+                 "capitole/cap2/pg16.jpg", "capitole/cap2/pg17.jpg", "capitole/cap2/pg18.jpg", "capitole/cap2/pg19.jpg", "capitole/cap2/pg20.jpg",
+                 "capitole/cap2/pg21.jpg", "capitole/cap2/pg22.jpg", "capitole/cap2/pg23.jpg", "capitole/cap2/pg24.jpg", "capitole/cap2/pg25.jpg",
+                 "capitole/cap2/pg26.jpg", "capitole/cap2/pg27.jpg", "capitole/cap2/pg28.jpg", "capitole/cap2/pg29.jpg", "capitole/cap2/pg30.jpg",
+                 "capitole/cap2/pg31.jpg", "capitole/cap2/pg32.jpg", "capitole/cap2/pg33.jpg", "capitole/cap2/pg34.jpg", "capitole/cap2/pg35.jpg",
+                 "capitole/cap2/pg36.jpg", "capitole/cap2/pg37.jpg", "capitole/cap2/pg38.jpg", "capitole/cap2/pg39.jpg", "capitole/cap2/pg40.jpg",
+                 "capitole/cap2/pg41.jpg", "capitole/cap2/pg42.jpg", "capitole/cap2/pg43.jpg", "capitole/cap2/pg44.jpg", "capitole/cap2/pg45.jpg",
+                 "capitole/cap2/pg46.jpg", "capitole/cap2/pg47.jpg", "capitole/cap2/pg48.jpg", "capitole/cap2/pg49.jpg", "capitole/cap2/pg50.jpg",
+                 "capitole/cap2/pg51.jpg", "capitole/cap2/pg52.jpg", "capitole/cap2/pg53.jpg", "capitole/cap2/pg54.jpg", "capitole/cap2/pg55.jpg",
+                 "capitole/cap2/pg56.jpg", "capitole/cap2/pg57.jpg", "capitole/cap2/pg58.jpg", "capitole/cap2/pg59.jpg", "capitole/cap2/pg60.jpg",
+                 "capitole/cap2/pg61.jpg", "capitole/cap2/pg62.jpg", "capitole/cap2/pg63.jpg", "capitole/cap2/pg64.jpg", "capitole/cap2/pg65.jpg",
+                 "capitole/cap2/pg66.jpg", "capitole/cap2/pg67.jpg", "capitole/cap2/pg68.jpg", "capitole/cap2/pg69.jpg", "capitole/cap2/pg70.jpg",
+                 "capitole/cap2/pg71.jpg", "capitole/cap2/pg72.jpg", "capitole/cap2/pg73.jpg"
+                ]
+    },
+    {
+        name: "Capitolul 3",
+        images: ["capitole/cap3/pg1.jpg", "capitole/cap3/pg2.jpg", "capitole/cap3/pg3.jpg", "capitole/cap3/pg4.jpg", "capitole/cap3/pg5.jpg",
+                 "capitole/cap3/pg6.jpg", "capitole/cap3/pg7.jpg", "capitole/cap3/pg8.jpg", "capitole/cap3/pg9.jpg", "capitole/cap3/pg10.jpg",
+                 "capitole/cap3/pg11.jpg", "capitole/cap3/pg12.jpg", "capitole/cap3/pg13.jpg", "capitole/cap3/pg14.jpg", "capitole/cap3/pg15.jpg",
+                 "capitole/cap3/pg16.jpg", "capitole/cap3/pg17.jpg", "capitole/cap3/pg18.jpg", "capitole/cap3/pg19.jpg", "capitole/cap3/pg20.jpg",
+                 "capitole/cap3/pg21.jpg", "capitole/cap3/pg22.jpg", "capitole/cap3/pg23.jpg", "capitole/cap3/pg24.jpg"
+                ]
+    }
+];
+
+var chapterNumber = document.getElementById("chapterNumber");
+var chapterContainer = document.getElementById("chapterContainer");
+var isExpanded = false;
+
+
+
+function goToChapter(chapterIndex) {
+    console.log("Ai apăsat pe Capitolul " + (chapterIndex + 1));
+    var chapterItems = document.querySelectorAll(".chapter-list li");
+    chapterItems.forEach(function(item) {
+        item.classList.remove("active");
+    });
+    chapterItems[chapterIndex].classList.add("active");
+    chapterNumber.textContent = chapters[chapterIndex].name;
+
+    var chapterImageContainer = document.querySelector(".chapter-images");
+    var loadingIndicator = document.querySelector(".loading-indicator");
+
+    // Afiseaza indicatorul de incarcare
+
+    // Ascunde imaginile existente
+    chapterImageContainer.innerHTML = "";
+
+    // Simuleaza o incarcare
+    setTimeout(function() {
+        var images = chapters[chapterIndex].images;
+
+        // Actualizeaza imaginile
+        for (var i = 0; i < images.length; i++) {
+            var img = document.createElement("img");
+            img.src = images[i];
+            chapterImageContainer.appendChild(img);
+        }
+
+        // Ascunde indicatorul de incarcare
+    }, 2000);
+}
+
+// Seteaza Capitolul 1 ca activ la incarcarea paginii
+goToChapter(1);
+
+var currentChapter = 1; // Capitolul curent
+
+function goToChapter(chapter) {
+    console.log("Ai apăsat pe Capitolul " + chapter);
+    currentChapter = chapter;
+    updateChapter();
+}
+
+function goToNextChapter() {
+    if (currentChapter < chapters.length) {
+        currentChapter++;
+        updateChapter();
+    }
+}
+
+function goToPreviousChapter() {
+    if (currentChapter > 1) {
+        currentChapter--;
+        updateChapter();
+    }
+}
+
+function updateChapter() {
+    chapterNumber.textContent = "Capitolul " + currentChapter;
+    var chapterItems = document.querySelectorAll(".chapter-list li");
+    chapterItems.forEach(function (item, index) {
+        if (index + 1 === currentChapter) {
+            item.classList.add("active");
+        } else {
+            item.classList.remove("active");
+        }
+    });
+
+    var chapterImageContainer = document.querySelector(".chapter-images");
+    var loadingIndicator = document.querySelector(".loading-indicator");
+
+
+
+    // Ascunde imaginile existente
+    chapterImageContainer.innerHTML = "";
+
+    // Simuleaza o incarcare
+    setTimeout(function () {
+        var images = chapters[currentChapter - 1].images;
+
+        // Actualizeaza imaginile
+        for (var i = 0; i < images.length; i++) {
+            var img = document.createElement("img");
+            img.src = images[i];
+            chapterImageContainer.appendChild(img);
+        }
+
+        // Ascunde indicatorul de incarcare
+        loadingIndicator.style.display = "none";
+    }, 2000);
+}
+
+
+
+    </script>
+</body>
+</html>

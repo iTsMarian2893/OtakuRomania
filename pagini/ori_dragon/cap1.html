@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/pg_read.css">
+</head>
+<body>
+    <div id="header">
+        <div id="logo">
+            <div>
+                <a href="../../main.html">
+                    <img src="poze/logo_otakuro.png" alt="Logo">
+                </a>
+            </div>
+        </div>
+        <div class="hr-line"></div>
+        <div>
+            <h2>
+                <a href="../ori_dragon/ori_dragon_detalii.html" class="chapter-title">Ori of the Dragon Chain: "Heart" in the Mind</a>
+            </h2>
+        </div>
+        <button id="expandButton" onclick="expandHeader()"><span id="chapterNumber" >Capitolul 1</span></button>
+        <div id="chapterContainer">
+            <ul class="chapter-list">
+                <li onclick="goToChapter(1)">Capitolul 1</li>
+                <li onclick="goToChapter(2)">Capitolul 2</li>
+                <li onclick="goToChapter(3)">Capitolul 3</li>
+                <li onclick="goToChapter(4)">Capitolul 4</li>
+                <li onclick="goToChapter(5)">Capitolul 5</li>
+                <li onclick="goToChapter(6)">Capitolul 6</li>
+                <li onclick="goToChapter(6)">Capitolul 7</li>
+
+            </ul>
+        </div>
+        <div id="chapterNav">
+            <button id="previousChapterButton" onclick="goToPreviousChapter()"><span>&#8592;</span></button>
+            <button id="nextChapterButton" onclick="goToNextChapter()"><span>&#8594;</span></button>
+        </div>
+    </div>
+
+    <div id="content">
+        <h1 id="chapterNumber"></h1>
+        <div class="chapter-images">
+            <div class="loading-indicator"></div>
+        </div>
+    </div>
+    <script>
+        function expandHeader() {
+    header.classList.toggle("expanded");
+    chapterContainer.style.display = header.classList.contains("expanded") ? "block" : "none";
+}
+var chapters = [
+    {
+        name: "Capitolul 1",
+        images: ["capitole/cap1/pag1.png", "capitole/cap1/pag2.jpg", "capitole/cap1/pag3.jpg", "capitole/cap1/pag4.jpg", "capitole/cap1/pag5.jpg",
+                 "capitole/cap1/pag6.jpg", "capitole/cap1/pag7.jpg", "capitole/cap1/pag8.jpg", "capitole/cap1/pag9.jpg", "capitole/cap1/pag10.jpg",
+                 "capitole/cap1/pag11.jpg", "capitole/cap1/pag12.jpg", "capitole/cap1/pag13.jpg", "capitole/cap1/pag14.jpg", "capitole/cap1/pag15.jpg",
+                 "capitole/cap1/pag16.jpg", "capitole/cap1/pag17.jpg", "capitole/cap1/pag18.jpg", "capitole/cap1/pag19.jpg", "capitole/cap1/pag20.jpg",
+                 "capitole/cap1/pag21.jpg", "capitole/cap1/pag22.jpg", "capitole/cap1/pag23.jpg", "capitole/cap1/pag24.jpg", "capitole/cap1/pag25.jpg",
+                 "capitole/cap1/pag26.jpg", "capitole/cap1/pag27.jpg", "capitole/cap1/pag28.jpg", "capitole/cap1/pag29.jpg", "capitole/cap1/pag30.jpg",
+                 "capitole/cap1/pag31.jpg", "capitole/cap1/pag32.jpg", "capitole/cap1/pag33.jpg", "capitole/cap1/pag34.jpg", "capitole/cap1/pag35.jpg",
+                 "capitole/cap1/pag36.jpg"
+                 ]
+    },
+    {
+        name: "Capitolul 1.5",
+        images: ["capitole/cap1-5/pag1.jpg", "capitole/cap1-5/pag2.jpg", "capitole/cap1-5/pag3.jpg", "capitole/cap1-5/pag4.jpg", "capitole/cap1-5/pag5.jpg",
+                 "capitole/cap1-5/pag6.jpg", "capitole/cap1-5/pag7.jpg", "capitole/cap1-5/pag8.jpg", "capitole/cap1-5/pag9.jpg", "capitole/cap1-5/pag10.jpg",
+                 "capitole/cap1-5/pag11.jpg", "capitole/cap1-5/pag12.jpg", "capitole/cap1-5/pag13.jpg", "capitole/cap1-5/pag14.jpg", "capitole/cap1-5/pag15.jpg",
+                 "capitole/cap1-5/pag16.jpg", "capitole/cap1-5/pag17.jpg", "capitole/cap1-5/pag18.jpg", "capitole/cap1-5/pag19.jpg", "capitole/cap1-5/pag20.jpg",
+                 "capitole/cap1-5/pag21.jpg", "capitole/cap1-5/pag22.jpg", "capitole/cap1-5/pag23.jpg", "capitole/cap1-5/pag24.jpg", "capitole/cap1-5/pag25.jpg",
+                 "capitole/cap1-5/pag26.jpg", "capitole/cap1-5/pag27.jpg", "capitole/cap1-5/pag28.jpg", "capitole/cap1-5/pag29.jpg", "capitole/cap1-5/pag30.jpg",
+                 "capitole/cap1-5/pag31.jpg", "capitole/cap1-5/pag32.jpg", "capitole/cap1-5/pag33.jpg", "capitole/cap1-5/pag34.jpg"
+                ]
+    },
+    {
+        name: "Capitolul 2",
+        images: [ "capitole/cap2/pag2.jpg", "capitole/cap2/pag3.jpg", "capitole/cap2/pag4.jpg", "capitole/cap2/pag5.jpg",
+                "capitole/cap2/pag6.jpg", "capitole/cap2/pag7.jpg", "capitole/cap2/pag8.jpg", "capitole/cap2/pag9.jpg", "capitole/cap2/pag10.jpg",
+                "capitole/cap2/pag11.jpg", "capitole/cap2/pag12.jpg", "capitole/cap2/pag13.jpg", "capitole/cap2/pag14.jpg", "capitole/cap2/pag15.jpg",
+                "capitole/cap2/pag16.jpg", "capitole/cap2/pag17.jpg", "capitole/cap2/pag18.jpg", "capitole/cap2/pag19.jpg", "capitole/cap2/pag20.jpg",
+                "capitole/cap2/pag21.jpg", "capitole/cap2/pag22.jpg", "capitole/cap2/pag23.jpg", "capitole/cap2/pag24.jpg", "capitole/cap2/pag25.jpg",
+                "capitole/cap2/pag26.jpg", "capitole/cap2/pag27.jpg", "capitole/cap2/pag28.jpg", "capitole/cap2/pag29.jpg"
+]
+    },
+    {
+        name: "Capitolul 3",
+        images: [ "capitole/cap3/pag2.jpg", "capitole/cap3/pag3.jpg", "capitole/cap3/pag4.jpg", "capitole/cap3/pag5.jpg",
+                 "capitole/cap3/pag6.jpg", "capitole/cap3/pag7.jpg", "capitole/cap3/pag8.jpg", "capitole/cap3/pag9.jpg", "capitole/cap3/pag10.jpg",
+                 "capitole/cap3/pag11.jpg", "capitole/cap3/pag12.jpg", "capitole/cap3/pag13.jpg", "capitole/cap3/pag14.jpg", "capitole/cap3/pag15.jpg",
+                 "capitole/cap3/pag16.jpg", "capitole/cap3/pag17.jpg", "capitole/cap3/pag18.jpg", "capitole/cap3/pag19.jpg", "capitole/cap3/pag20.jpg",
+                 "capitole/cap3/pag21.jpg", "capitole/cap3/pag22.jpg", "capitole/cap3/pag23.jpg", "capitole/cap3/pag24.jpg", "capitole/cap3/pag25.jpg",
+                 "capitole/cap3/pag26.jpg", "capitole/cap3/pag27.jpg", "capitole/cap3/pag28.jpg", "capitole/cap3/pag29.jpg", "capitole/cap3/pag30.jpg",
+                 "capitole/cap3/pag31.jpg", "capitole/cap3/pag32.jpg", "capitole/cap3/pag33.jpg", "capitole/cap3/pag34.jpg", "capitole/cap3/pag35.jpg"
+                ]
+    },
+    {
+        name: "Capitolul 4",
+        images: [ "capitole/cap4/pg2.jpg", "capitole/cap4/pg3.jpg", "capitole/cap4/pg4.jpg", "capitole/cap4/pg5.jpg",
+                 "capitole/cap4/pg6.jpg", "capitole/cap4/pg7.jpg", "capitole/cap4/pg8.jpg", "capitole/cap4/pg9.jpg", "capitole/cap4/pg10.jpg",
+                 "capitole/cap4/pg11.jpg", "capitole/cap4/pg12.jpg", "capitole/cap4/pg13.jpg", "capitole/cap4/pg14.jpg", "capitole/cap4/pg15.jpg",
+                 "capitole/cap4/pg16.jpg", "capitole/cap4/pg17.jpg", "capitole/cap4/pg18.jpg", "capitole/cap4/pg19.jpg", "capitole/cap4/pg20.jpg",
+                 "capitole/cap4/pg21.jpg", "capitole/cap4/pg22.jpg", "capitole/cap4/pg23.jpg", "capitole/cap4/pg24.jpg", "capitole/cap4/pg25.jpg",
+                 "capitole/cap4/pg26.jpg", "capitole/cap4/pg27.jpg", "capitole/cap4/pg28.jpg", "capitole/cap4/pg29.jpg", "capitole/cap4/pg30.jpg",
+                 "capitole/cap4/pg31.jpg", "capitole/cap4/pg32.jpg", "capitole/cap4/pg33.jpg", "capitole/cap4/pg34.jpg", "capitole/cap4/pg35.jpg",
+                 "capitole/cap4/pg36.jpg", "capitole/cap4/pg37.jpg", "capitole/cap4/pg38.jpg", "capitole/cap4/pg39.jpg", "capitole/cap4/pg40.jpg",
+                 "capitole/cap4/pg41.jpg", "capitole/cap4/pg42.jpg"
+                ]
+    },
+    {
+        name: "Capitolul 5",
+        images: [ "capitole/cap5/pg2.jpg", "capitole/cap5/pg3.jpg", "capitole/cap5/pg4.jpg", "capitole/cap5/pg5.jpg",
+                 "capitole/cap5/pg6.jpg", "capitole/cap5/pg7.jpg", "capitole/cap5/pg8.jpg", "capitole/cap5/pg9.jpg", "capitole/cap5/pg10.jpg",
+                 "capitole/cap5/pg11.jpg", "capitole/cap5/pg12.jpg", "capitole/cap5/pg13.jpg", "capitole/cap5/pg14.jpg", "capitole/cap5/pg15.jpg",
+                 "capitole/cap5/pg16.jpg", "capitole/cap5/pg17.jpg", "capitole/cap5/pg18.jpg", "capitole/cap5/pg19.jpg", "capitole/cap5/pg20.jpg",
+                 "capitole/cap5/pg21.jpg", "capitole/cap5/pg22.jpg", "capitole/cap5/pg23.jpg", "capitole/cap5/pg24.jpg", "capitole/cap5/pg25.jpg",
+                 "capitole/cap5/pg26.jpg", "capitole/cap5/pg27.jpg", "capitole/cap5/pg28.jpg"
+                ]
+    },
+    {
+        name: "Capitolul 6",
+        images: ["capitole/cap6/pg1.jpg", "capitole/cap6/pg2.jpg", "capitole/cap6/pg3.jpg", "capitole/cap6/pg4.jpg", "capitole/cap6/pg5.jpg",
+                 "capitole/cap6/pg6.jpg", "capitole/cap6/pg7.jpg", "capitole/cap6/pg8.jpg", "capitole/cap6/pg9.jpg", "capitole/cap6/pg10.jpg",
+                 "capitole/cap6/pg11.jpg", "capitole/cap6/pg12.jpg", "capitole/cap6/pg13.jpg", "capitole/cap6/pg14.jpg", "capitole/cap6/pg15.jpg",
+                 "capitole/cap6/pg16.jpg", "capitole/cap6/pg17.jpg", "capitole/cap6/pg18.jpg", "capitole/cap6/pg19.jpg", "capitole/cap6/pg20.jpg",
+                 "capitole/cap6/pg21.jpg", "capitole/cap6/pg22.jpg", "capitole/cap6/pg23.jpg", "capitole/cap6/pg24.jpg", "capitole/cap6/pg25.jpg",
+                 "capitole/cap6/pg26.jpg", "capitole/cap6/pg27.jpg", "capitole/cap6/pg28.jpg", "capitole/cap6/pg29.jpg", "capitole/cap6/pg30.jpg",
+                 "capitole/cap6/pg31.jpg", "capitole/cap6/pg32.jpg", "capitole/cap6/pg33.jpg"
+                 ]
+    }
+];
+
+var chapterNumber = document.getElementById("chapterNumber");
+var chapterContainer = document.getElementById("chapterContainer");
+var isExpanded = false;
+
+
+
+function goToChapter(chapterIndex) {
+    console.log("Ai apăsat pe Capitolul " + (chapterIndex + 1));
+    var chapterItems = document.querySelectorAll(".chapter-list li");
+    chapterItems.forEach(function(item) {
+        item.classList.remove("active");
+    });
+    chapterItems[chapterIndex].classList.add("active");
+    chapterNumber.textContent = chapters[chapterIndex].name;
+
+    var chapterImageContainer = document.querySelector(".chapter-images");
+    var loadingIndicator = document.querySelector(".loading-indicator");
+
+    // Afiseaza indicatorul de incarcare
+
+    // Ascunde imaginile existente
+    chapterImageContainer.innerHTML = "";
+
+    // Simuleaza o incarcare
+    setTimeout(function() {
+        var images = chapters[chapterIndex].images;
+
+        // Actualizeaza imaginile
+        for (var i = 0; i < images.length; i++) {
+            var img = document.createElement("img");
+            img.src = images[i];
+            chapterImageContainer.appendChild(img);
+        }
+
+        // Ascunde indicatorul de incarcare
+    }, 2000);
+}
+
+// Seteaza Capitolul 1 ca activ la incarcarea paginii
+goToChapter(1);
+
+var currentChapter = 1; // Capitolul curent
+
+function goToChapter(chapter) {
+    console.log("Ai apăsat pe Capitolul " + chapter);
+    currentChapter = chapter;
+    updateChapter();
+}
+
+function goToNextChapter() {
+    if (currentChapter < chapters.length) {
+        currentChapter++;
+        updateChapter();
+    }
+}
+
+function goToPreviousChapter() {
+    if (currentChapter > 1) {
+        currentChapter--;
+        updateChapter();
+    }
+}
+
+function updateChapter() {
+    chapterNumber.textContent = "Capitolul " + currentChapter;
+    var chapterItems = document.querySelectorAll(".chapter-list li");
+    chapterItems.forEach(function (item, index) {
+        if (index + 1 === currentChapter) {
+            item.classList.add("active");
+        } else {
+            item.classList.remove("active");
+        }
+    });
+
+    var chapterImageContainer = document.querySelector(".chapter-images");
+    var loadingIndicator = document.querySelector(".loading-indicator");
+
+
+
+    // Ascunde imaginile existente
+    chapterImageContainer.innerHTML = "";
+
+    // Simuleaza o incarcare
+    setTimeout(function () {
+        var images = chapters[currentChapter - 1].images;
+
+        // Actualizeaza imaginile
+        for (var i = 0; i < images.length; i++) {
+            var img = document.createElement("img");
+            img.src = images[i];
+            chapterImageContainer.appendChild(img);
+        }
+
+        // Ascunde indicatorul de incarcare
+        loadingIndicator.style.display = "none";
+    }, 2000);
+}
+
+
+
+    </script>
+</body>
+</html>

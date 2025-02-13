@@ -1,0 +1,103 @@
+<html>
+<head>
+    <title>Pagina</title>
+    <link rel="stylesheet" href="css/start.css">
+    <link rel="stylesheet" href="css/header.css">
+<style>
+  body {
+    background-image: url('poze/bg_blurat.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Poppins,Arial;
+    color: #aaa;
+    font-size: 14px;
+    line-height: 1.5em;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+    -webkit-text-size-adjust: none;
+}
+.auth-btn {
+    background-color: white;
+    padding: 0.5rem 1rem;
+    border: 0;
+    border-radius: 130px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 0 10px;
+    right: 10px;
+    width: 155px;
+    transition: 0.4s;
+    font-size: 20px;
+    border-radius: 130px;
+
+}
+.auth-btn:hover {
+
+background-color: rgb(0, 110, 255);
+}
+.titlu-auten{
+    color: #0070ff;;
+}
+.titlu-auten:hover{
+    color: white;
+}
+@media(max-width: 992px){
+  .auth-btn, .user-btn {
+    font-size: 15px; /* Mărimea fontului pentru autentificare și numele utilizatorului */
+    padding: 0.3rem 0.6rem; /* Spațierea în jurul butoanelor */
+    margin-right: 5px;
+    margin-left: auto;
+  }
+}
+</style>
+</head>
+<body>
+    <div id="wrapper">
+        <!--Header-->
+        <header id="headerr">
+            <div id="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+            <div class="menu-container">
+              <div class="close-menu" onclick="toggleMenu()">Închide Meniu</div>
+              <BR><BR><BR>
+              <ul class="menu-list">
+                <li class="nav-item"><a href="#" class="nav-link">Acasă</a></li>
+                <li class="nav-item"><a href="mai_mult.php" class="nav-link">Mai Mult</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+              </ul>
+            </div>
+            <a href="start.html" class="logo-header">OtakuRo</a>
+
+        </header>
+
+<BR><BR><BR>
+        <!--Main-->
+        <div id="i-top">
+            <div class="main-container">
+                <img src="poze/logo_otakuro.png" class="logo"></div>
+                <div class="gohome" style="background-image: url(poze/pngegg.png);">
+                    
+                    <a href="main.html" class="home">
+                        <span class="text-home">Du-te acasa!</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+<script>
+    function toggleMenu() {
+      var menuContainer = document.querySelector('.menu-container');
+      document.body.classList.toggle('menu-open'); // Adaugă/elimină clasa "menu-open" la body pentru a deschide/închide meniul
+    }
+  </script>
+</body>
+</html>

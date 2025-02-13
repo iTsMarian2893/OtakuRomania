@@ -1,0 +1,38 @@
+@media (min-width: 1800px){
+    .top-container, .container-main, .footer-container, .container {
+        max-width: 1760px;
+    }
+}
+@media (min-width: 1200px){
+    .top-container, .container-main, .footer-container, .container {
+        max-width: 1140px;
+    } 
+}
+@media (min-width: 992px){
+    .top-container, .container-main, .footer-container, .container {
+        max-width: 960px;
+    }
+}
+@media (min-width: 760px){
+    .top-container,  .container-main, .footer-container, .container {
+        max-width: 720px;
+    }
+}
+@media (min-width: 576px){
+    .top-container, .container-main, .footer-container, .container {
+        max-width: 540px;
+    }
+}
+
+@media (max-width: 1199px) {
+    #top-main .swipe-item .swiper-info .swipe-descriere {
+      font-size: 1.2rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      line-height: 1.5rem;
+      max-height: 3rem;
+      overflow: hidden;
+      color: #aaa;
+    }
+  }

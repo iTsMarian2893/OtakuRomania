@@ -1,0 +1,969 @@
+<?php session_start(); ?>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Anime Template">
+        <meta name="keywords" content="Anime, unica, creative, html">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="css/header.css">
+
+          <link rel="stylesheet" href="css/card.css">
+          <link rel="stylesheet" href="css/login2.css">
+          <link rel="stylesheet" href="css/search2.css">
+          
+
+          <link rel="stylesheet" type="text/css" href="css/mai_mult2.css">
+  
+          <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+          <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+  
+          <script src="scripts/menu.js"></script>
+              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  
+          <style>
+          
+  .style_label {
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 20px;
+      line-height: 21px;
+      text-transform: uppercase;
+      padding-left: 20px;
+      position: relative;
+      font-family: "Oswald", sans-serif;
+  }
+
+  #tipImagine {
+      padding: 8px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: #fff;
+      color: #333;
+  transition: border-color 0.3s ease;
+ }
+
+ #tipImagine:focus {
+     outline: none;
+     border-color: #0066ff;
+ }
+
+
+ .poza-item {
+     position: relative;
+     border-radius: 5px;
+     margin-bottom: 20px;
+     overflow: hidden;
+ }
+
+ .set-bg {
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: top center;
+ }
+
+ .poza-item .tag {
+     font-size: 13px;
+     color: #ffffff;
+     background: #0066ff;
+     display: inline-block;
+     padding: 2px 12px;
+     border-radius: 4px;
+     position: absolute;
+     left: 10px;
+     top: 10px;
+     cursor: pointer;
+ }
+
+ .poza-item img {
+     width: 100%;
+     height: 100%;
+     border-radius: 5px;
+ }
+
+ .element-text {
+     margin-top: 10px;
+     text-align: center;
+ }
+
+ .element-text h5 {
+     margin: 0;
+     font-size: 18px;
+     color: #ffffff;
+ }
+#shadow-overlay {
+ position: absolute;
+ bottom: 0;
+ left: 0;
+ width: 100%;
+ height: 100px; /* ajustează înălțimea umbrei */
+ background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.poza-item .tag {
+    font-size: 13px;
+    color: #ffffff;
+    background: #0066ff;
+    display: inline-block;
+    padding: 2px 12px;
+    border-radius: 4px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+#boddy {
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #aaa;
+    font-size: 14px;
+    line-height: 1.5em;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+    -webkit-text-size-adjust: none;
+}
+
+        </style>
+    </head>
+    <body id="boddy" style="    background-image: url(poze/bg_blurat.jpg);" class="menu-open">
+        <!--Header-->
+        <header id="headerr">
+
+          <div class="logo-menu">
+              <div id="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+              <div class="menu-container">
+                  <div class="close-menu" onclick="toggleMenu()">Închide Meniu</div>
+                  <BR><BR><BR>
+                  <ul class="menu-list">
+                    <li class="nav-item"><a href="main.html" class="nav-link">Acasă</a></li>
+                    <li class="nav-item"><a href="mai_mult.html" class="nav-link">Mai Mult</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                  </ul>
+                </div>
+                <a href="start.html" class="logo-header">OtakuRo</a>
+          </div>
+          <div class="log-container">
+              <button class="search-button"><i class="fas fa-search"></i></button>
+              <div class="auth-btn" id="authButtons">
+                  <a href="login_regis.html" class="titlu-auten">Autentificare</a>
+              </div>
+              <div class="user-btn" id="userBtn" style="display: none;"></div>
+          </div>
+      </header>
+      <div class="search-bar" id="search-bar">
+        <form action="#" class="search-form">
+          <input type="search" name="search-input" class="search-input" placeholder="Caută serii...">
+            <button type="submit" class="search-submit"><i class="fas fa-search"></i></button>
+            </form>
+            <ul class="search-results"></ul>
+        </div>
+        <!--Header End-->
+        <BR><BR><BR>
+            <section class="elemente spad">
+                <div class="container">
+                    <div class="row">
+                        <div class="zona-content">
+                            <div class="content">
+                                <!-- Titlu si selector de sortare -->
+                                <div class="zona-titlu">
+                                    <div class="row">
+                                        <div class="zona-stanga-titlu">
+                                            <div class="sectiune-titlu">
+                                                <h4>Mai Multe</h4>
+                                            </div>
+                                        </div>
+                                        <div class="zona-dreapta-titlu">
+                                            <div class="sortare">
+                                                <label for="tipImagine" class="style_label">Alege tipul:</label>
+                                                <select id="tipImagine" onchange="afiseazaDoar(this.value)">
+                                                    <option value="all">Arată toate</option>
+                                                    <option value="anime">Arată doar Anime</option>
+                                                    <option value="manga">Arată doar Manga</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <!-- Lista de elemente -->
+                                <div id="lista-elemente" class="row">
+                                  <article class="element item">
+                                    <div class="tag" data-type="Anime">Anime</div><a href="pagini/mha_s6/mha_s6_detalii.html">
+        
+                                     <img
+                                        class="poza_item"
+                                        src="poze/my_hero_s6_cover.jpg"
+                                        alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                                        width="1920"
+                                        height="2193"
+                                    />
+                                    <div class="card__content | flow">
+                                    <div class="card__content--container | flow">
+                                    <h2 class="card__title">My Hero Academia Season 6</h2>
+                                    <p class="card__description">
+                                    Cu Tomura Shigaraki la conducere, fosta Armată de Eliberare este acum cunoscută sub numele de Frontul...                                    </p>
+                                    </div></a>
+                                    <button class="card__button">MAI MULT</button>
+                                    </div>
+                                </article>
+                                    
+                                    <article class="element item">
+                                    <div class="tag" data-type="Manga">Manga</div><a href="pagini/vagabond/vagabond_detalii.html">
+
+                                    <img
+                                      class="poza_item"
+                                      src="poze/vagabond_cover.jpg"
+                                      alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                                      width="1920"
+                                      height="2193"
+                                    />
+                                    <div class="card__content | flow">
+                                    <div class="card__content--container | flow">
+                                    <h2 class="card__title">Vagabond</h2>
+                                    <p class="card__description">
+                                      În Japonia secolului al XVI-lea, Shinmen Takezou este un tânăr sălbatic și aspru, atât prin înfățișare, cât și prin acțiunile sale.                                    </p>
+                                    </div></a> 
+                                    <button class="card__button">MAI MULT</button>
+                                    </div>
+                                  </article>
+
+                                  <article class="element item">
+                                    <div class="tag" data-type="Anime">Anime</div><a href="pagini/engage_kiss/engage_kiss_detalii.html">
+
+                                    <img
+                                      class="poza_item"
+                                      src="poze/engage_kiss_cover.png"
+                                      alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                                      width="1920"
+                                      height="2193"
+                                    />
+                                    <div class="card__content | flow">
+                                    <div class="card__content--container | flow">
+                                    <h2 class="card__title">Engage Kiss</h2>
+                                    <p class="card__description">
+                                      Bayron City, o metropolă de pionierat construită pe o sursă de energie recent descoperită, promite fiecărui cetățean un stil de viață luxos și confortabil...                                  </p>
+                                    </div></a>
+                                    <button class="card__button">MAI MULT</button>
+                                    </div>
+                                  </article>
+
+                                  <article class="element item">
+                                    <div class="tag" data-type="Manga">Manga</div><a href="pagini/gachiakuta/gachiakuta_detalii.html">
+
+                                    <img
+                                      class="poza_item"
+                                      src="poze/gachiakuta_logo.jpg"
+                                      alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                                      width="1920"
+                                      height="2193"
+                                    />
+                                    <div class="card__content | flow">
+                                    <div class="card__content--container | flow">
+                                    <h2 class="card__title">Gachiakuta</h2>
+                                    <p class="card__description">
+                                      Trăind în mahalaua unui oraș bogat, Rudo și tatăl său adoptiv Legto încearcă să coexiste cu restul locuitorilor orașului, dar Rudo disprețuiește risipa clasei superioare.                                    </p>
+                                    </div></a>
+                                    <button class="card__button">MAI MULT</button>
+                                    </div>
+                                  </article>
+
+                                  <article class="element item">
+                                    <div class="tag" data-type="Anime">Anime</div><a href="pagini/shinobi_no_ittoki/shinobi_no_ittoki_detalii.html">
+
+                                    <img
+                                      class="poza_item"
+                                      src="poze/shinobi_no_ittoki_cover.jpg"
+                                      alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                                      width="1920"
+                                      height="2193"
+                                    />
+                                    <div class="card__content | flow">
+                                    <div class="card__content--container | flow">
+                                    <h2 class="card__title">Shinobi no Ittoki</h2>
+                                    <p class="card__description">
+                                    Ittoki Sakuraba nu reușește să înțeleagă de ce mama sa, unchiul său și prietenul său din copilărie, Kousetsu, par să ia atât de în serios securitatea sa...                                    </p>
+                                    </div></a>
+                                    <button class="card__button">MAI MULT</button>
+                                    </div>
+                                  </article>
+
+                                  <article class="element item">
+                                    <div class="tag" data-type="Anime">Anime</div><a href="pagini/trigun_stampede/trigun_stampede_detalii.html">
+
+                                    <img
+                                      class="poza_item"
+                                      src="poze/trigun_stampede_cover.jpg"
+                                      alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                                      width="1920"
+                                      height="2193"
+                                    />
+                                    <div class="card__content | flow">
+                                    <div class="card__content--container | flow">
+                                    <h2 class="card__title">Trigun Stampede</h2>
+                                    <p class="card__description">
+                                      Pe planeta Noman, reporterii Meryl Stryfe și Roberto De Niro traversează deșertul în căutarea infamului infractor Vash the Stampede...                                   </p>
+                                    </div></a>
+                                    <button class="card__button">MAI MULT</button>
+                                    </div>
+                                  </article>
+
+                                  <article class="element item">
+                                    <div class="tag" data-type="Anime">Anime</div><a href="pagini/ragna_crimson/ragna_crimson_detalii.html">
+
+                                    <img
+                                      class="poza_item"
+                                      src="poze/ragna_crimson_cover.jpg"
+                                      alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                                      width="1920"
+                                      height="2193"
+                                    />
+                                    <div class="card__content | flow">
+                                    <div class="card__content--container | flow">
+                                    <h2 class="card__title">Ragna Crimson</h2>
+                                    <p class="card__description">
+                                      Într-o lume în care dragonii stăpânesc cerul, marea și pământul, cei care vor să se lupte cu ei și să câștige trebuie...
+                                    </div></a>
+                                    <button class="card__button">MAI MULT</button>
+                                    </div>
+                                  </article>
+
+                                  <article class="element item">
+                                    <div class="tag" data-type="Manga">Manga</div><a href="pagini/kagurabachi/kagurabachi_detalii.html">
+
+                                    <img
+                                      class="poza_item"
+                                      src="poze/kagurabachi_cover.jpg"
+                                      alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                                      width="1920"
+                                      height="2193"
+                                    />
+                                    <div class="card__content | flow">
+                                    <div class="card__content--container | flow">
+                                    <h2 class="card__title">Kagurabachi </h2>
+                                    <p class="card__description">
+                                      Tânărul Chihiro își petrece zilele antrenându-se sub îndrumarea faimosului său tată spadasin. Într-o zi speră să devină el însuși un mare fabricant de săbii...                                    </p>
+                                    </div></a>
+                                    <button class="card__button">MAI MULT</button>
+                                    </div>
+                                  </article>
+
+                                  <article class="element item">
+                                    <div class="tag" data-type="Manga">Manga</div><a href="pagini/blue_lock/blue_lock_detalii.html">
+
+                                    <img
+                                      class="poza_item"
+                                      src="poze/blue_lock_cover.jpg"
+                                      alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                                      width="1920"
+                                      height="2193"
+                                    />
+                                    <div class="card__content | flow">
+                                    <div class="card__content--container | flow">
+                                    <h2 class="card__title">Blue Lock</h2>
+                                    <p class="card__description">
+                                      După ce reflectează asupra stării actuale a fotbalului japonez, Asociația Japoneză de Fotbal decide să-l angajeze pe enigmaticul și excentricul antrenor Jinpachi Ego pentru...
+                                    </div></a>
+                                    <button class="card__button">MAI MULT</button>
+                                    </div>
+                                  </article>
+
+                                  <article class="element item">
+                                    <div class="tag" data-type="Manga">Manga</div><a href="pagini/ao_ashi/ao_ashi_detalii.html">
+
+                                    <img
+                                      class="poza_item"
+                                      src="poze/ao_ashi4.jpg"
+                                      alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                                      width="1920"
+                                      height="2193"
+                                    />
+                                    <div class="card__content | flow">
+                                    <div class="card__content--container | flow">
+                                    <h2 class="card__title">Ao Ashi</h2>
+                                    <p class="card__description">
+                                      Ashito Aoi, un elev de gimnaziu din Ehime, aflat în al treilea an, îl întâlnește pe Tatsuya Fukuda, un antrenor...                                    </p>
+                                    </div></a>
+                                    <button class="card__button">MAI MULT</button>
+                                    </div>
+                                  </article>
+
+                                  <article class="element item">
+                                    <div class="tag" data-type="Anime">Anime</div><a href="pagini/demon_slayer_s1/demon_slayer_s1_detalii.html">
+        
+                                     <img
+                                        class="poza_item"
+                                        src="poze/demon_slayer_s1_cover.jpg"
+                                        alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                                        width="1920"
+                                        height="2193"
+                                    />
+                                    <div class="card__content | flow">
+                                    <div class="card__content--container | flow">
+                                    <h2 class="card__title">Demon Slayer Season 1</h2>
+                                    <p class="card__description">
+                                    De la moartea tatălui său, povara susținerii familiei a căzut pe umerii lui Tanjirou Kamado. Deși trăiesc...                                    </p>
+                                    </div></a>
+                                    <button class="card__button">MAI MULT</button>
+                                    </div>
+                                </article>
+
+                                  <article class="element item">
+                                    <div class="tag" data-type="Anime">Anime</div><a href="pagini/cyberpunk_edgerunners/cyberpunk_edgerunners_detalii.html">
+
+                                    <img
+                                      class="poza_item"
+                                      src="poze/cyberpunk_cover.jpg"
+                                      alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                                      width="1920"
+                                      height="2193"
+                                    />
+                                    <div class="card__content | flow">
+                                    <div class="card__content--container | flow">
+                                    <h2 class="card__title">Cyberpunk Edgerunners</h2>
+                                    <p class="card__description">
+                                      Visele sunt condamnate să moară în Night City, o metropolă californiană futuristă. Ca adolescent care trăiește...                                    </p>
+                                    </div></a>
+                                    <button class="card__button">MAI MULT</button>
+                                    </div>
+                                  </article>
+
+                                  <article class="element item">
+                                    <div class="tag" data-type="Manga">Manga</div><a href="pagini/ori_dragon/ori_dragon_detalii.html">
+
+                                    <img
+                                      class="poza_item"
+                                      src="poze/ori_cover.jpg"
+                                      alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                                      width="1920"
+                                      height="2193"
+                                    />
+                                    <div class="card__content | flow">
+                                    <div class="card__content--container | flow">
+                                    <h2 class="card__title">Ori of the Dragon Chain</h2>
+                                    <p class="card__description">
+                                        Academia Solminati este o școală de prestigiu care adăpostește visele și speranțele studenților ambițioși...
+                                    </div></a>
+                                    <button class="card__button">MAI MULT</button>
+                                    </div>
+                                  </article>
+
+                                </article>
+                                <article class="element item">
+                                    <div class="tag" data-type="Anime">Anime</div><a href="pagini/vinland_saga_s1/vinland_saga_s1_detalii.html">
+        
+                                     <img
+                                        class="poza_item"
+                                        src="poze/vinland_s1_cover.jpg"
+                                        alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                                        width="1920"
+                                        height="2193"
+                                    />
+                                    <div class="card__content | flow">
+                                    <div class="card__content--container | flow">
+                                    <h2 class="card__title">Vinland Saga <br>Season 1</h2>
+                                    <p class="card__description">
+                                    Tânărul Thorfinn a crescut ascultând poveștile vechilor marinari care au călătorit pe ocean și au ajuns în locul de legendă, Vinland.
+                                    </p>
+                                    </div></a>
+                                    <button class="card__button">MAI MULT</button>
+                                    </div>
+                                </article>
+
+                                <article class="element item">
+                                  <div class="tag" data-type="Anime">Anime</div><a href="pagini/one_piece_red/one_piece_red_detalii.html">
+      
+                                   <img
+                                      class="poza_item"
+                                      src="poze/one_piece_red.png"
+                                      alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                                      width="1920"
+                                      height="2193"
+                                  />
+                                  <div class="card__content | flow">
+                                  <div class="card__content--container | flow">
+                                  <h2 class="card__title">One Piece: Red</h2>
+                                  <p class="card__description">
+                                  În copilărie, Uta - fosta muziciană a Piraților cu Părul Roșu și prietena din copilărie a lui Monkey D. Luffy...
+                                  </p>
+                                  </div></a>
+                                  <button class="card__button">MAI MULT</button>
+                                  </div>
+                              </article>
+
+
+      
+<style>
+    .flow > * + * {
+  margin-top: var(--flow-space, 1em);
+}
+
+
+:root {
+  /* Colors */
+  --brand-color: hsl(46, 100%, 50%);
+  --black: hsl(0, 0%, 0%);
+  --white: hsl(0, 0%, 100%);
+  /* Fonts */
+  --font-title: "Montserrat", sans-serif;
+  --font-text: "Lato", sans-serif;
+}
+
+/* RESET */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+h2 {
+  font-size: 29px;
+  font-family: var(--font-title);
+  color: var(--white);
+  line-height: 1.1;
+}
+
+p {
+  font-family: var(--font-text);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--white);
+}
+/* Remove default margin */
+body,
+h2,
+p {
+  margin: 0;
+}
+/* CARD COMPONENT */
+/* Adaugă aceste stiluri pentru a limita dimensiunile imaginii */
+.card__img-container {
+    max-height: 300px; /* Sau orice înălțime dorită */
+    overflow: hidden;
+}
+.element {
+  display: grid;
+  margin: 25px;
+    place-items: center;
+    width: 80vw;
+    max-width: 16.875rem;    
+    height: 23.125rem;    
+    overflow: hidden;
+    margin-left: 85px;
+    transition: transform 0.3s;
+
+    border-radius: 0.625rem;
+    box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+}
+.element.hovered {
+    transform: scale(1.05);
+}
+.element > * {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.poza_item {
+  object-fit: cover;
+  width: 80vw;
+    max-width: 16.875rem;
+    height: 23.125rem;
+}
+
+.card__content {
+  --flow-space: 0.9375rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: flex-end;
+  padding: 5% 1.25rem 1.875rem;
+  background: linear-gradient(
+    180deg,
+    hsla(0, 0%, 0%, 0) 0%,
+    hsla(0, 0%, 0%, 0.3) 10%,
+    hsl(0, 0%, 0%) 100%
+  );
+}
+
+.card__content--container {
+  --flow-space: 1.25rem;
+}
+
+.card__title {
+  position: relative;
+  width: fit-content;
+  width: -moz-fit-content; /* Prefijo necesario para Firefox  */
+}
+
+.card__title::after {
+  content: "";
+  position: absolute;
+  height: 0.3125rem;
+  width: calc(100% + 1.25rem);
+  bottom: calc((1.25rem - 0.5rem) * -1);
+  left: -1.25rem;
+  background-color: var(--brand-color);
+}
+
+.card__button {
+  padding: 0.75em 1.6em;
+  width: fit-content;
+  width: -moz-fit-content; /* Prefijo necesario para Firefox  */
+  font-variant: small-caps;
+  font-weight: bold;
+  border-radius: 0.45em;
+  border: none;
+  background-color: var(--brand-color);
+  font-family: var(--font-title);
+  font-size: 1.125rem;
+  color: var(--black);
+}
+
+.card__button:focus {
+  outline: 2px solid black;
+  outline-offset: -5px;
+}
+
+@media (any-hover: hover) and (any-pointer: fine) {
+  .card__content {
+    transform: translateY(62%);
+    transition: transform 500ms ease-out;
+    transition-delay: 500ms;
+  }
+
+  .card__title::after {
+    opacity: 0;
+    transform: scaleX(0);
+    transition: opacity 1000ms ease-in, transform 500ms ease-out;
+    transition-delay: 500ms;
+    transform-origin: right;
+  }
+
+  .poza_item {
+    transition: transform 500ms ease-in;
+  }
+
+  .card__content--container > :not(.card__title),
+  .card__button {
+    opacity: 0;
+    transition: transform 500ms ease-out, opacity 500ms ease-out;
+  }
+
+  .element:hover,
+  .element:focus-within {
+    transform: scale(1.05);
+    transition: transform 500ms ease-in;
+  }
+
+  .element:hover .card__content,
+  .element:focus-within .card__content {
+    transform: translateY(0);
+    transition: transform 500ms ease-in;
+  }
+
+  .element:focus-within .card__content {
+    transition-duration: 0ms;
+  }
+
+  .element:hover .poza_item,
+  .element:focus-within .poza_item {
+    transform: scale(1.3);
+  }
+
+  .element:hover .card__content--container > :not(.card__title),
+  .element:hover .card__button,
+  .element:focus-within .card__content--container > :not(.card__title),
+  .element:focus-within .card__button {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+    transition-delay: 1000ms;
+  }
+
+  .element:hover .card__title::after,
+  .element:focus-within .card__title::after {
+    opacity: 1;
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: opacity 500ms ease-in, transform 500ms ease-in;
+    transition-delay: 500ms;
+  }
+}
+</style>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pagina-next">
+                            <a href="#" class="current-page">1</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        <footer class="footer">
+            <div class="page-up">
+              <a href="#" id="scrollToTopButton">
+                <span class="arrow_carrot-up"></span>
+              </a>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="zona-stanga">
+                  <div class="footer-logo">
+                    <a href="start.html">
+                      <img src="poze/logo_otakuro.png" class="dimensiune-poza">
+                    </a>
+                  </div>
+                </div>
+                <div class="zona-centru">
+                  <div class="footer-nav">
+                    <ul>
+                      <li class="active"><a href="#">Acasă</a></li>
+                      <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="zona-dreapta">
+                  <p>
+                    Copyright ©2024 All rights reserved | This template is made with love by Mrn
+                  </p>
+                </div>
+              </div>
+            </div>
+          </footer>
+          <script>
+// Lista completă a elementelor (anime și manga)
+var listaCompleta = [
+    { imagine: 'one_piece_red.jpg', tip: 'Anime', nume: 'One Piece Film: Red', pagina: 'pagini/one_piece_red/one_piece_red_detalii.php' },
+    { imagine: 'ori_cover.jpg', tip: 'Manga', nume: 'Ori of the Dragon', pagina: '#' }, // Înlocuiește '#' cu link-ul real
+
+];
+
+function afiseazaDoar(tip) {
+    var elemente = document.querySelectorAll(".item");
+
+    // Afiseaza sau ascunde elementele in functie de opțiunea selectată
+    elemente.forEach(function(element) {
+        var tagElement = element.querySelector(".tag");
+
+        // Verifică dacă elementul și proprietatea există înainte de a le accesa
+        if (tagElement && tagElement.getAttribute("data-type")) {
+            var elementTip = tagElement.getAttribute("data-type");
+
+            if (tip === 'all' || elementTip.toLowerCase() === tip.toLowerCase()) {
+                element.classList.remove('hidden');
+            } else {
+                element.classList.add('hidden');
+            }
+        }
+    });
+}
+
+
+// Inițializează pagina cu toate elementele la încărcarea paginii
+window.onload = function () {
+    afiseazaDoar('all');
+
+    // Încearcă să obții elementul după încărcarea paginii
+    var selectTip = document.getElementById("select-tip");
+
+    // Verifică dacă elementul există înainte de a adăuga evenimentul
+    if (selectTip) {
+        selectTip.addEventListener("change", function() {
+            afiseazaDoar(this.value);
+        });
+    }
+};
+
+        </script>
+<style>
+  /* Adaugă aceste stiluri la CSS */
+.hidden {
+    display: none;
+}
+
+.card.ascunde {
+    visibility: hidden;
+    height: 0;
+    padding: 0;
+}
+
+
+</style>
+<script>
+            
+  var searchButton = document.querySelector(".search-button");
+  var searchBar = document.querySelector("#search-bar");
+  var searchInput = document.querySelector(".search-input");
+  var searchResultsList = document.querySelector(".search-results");
+  
+  searchButton.addEventListener("click", function() {
+    searchBar.style.display = "block";
+    searchInput.focus();
+  });
+  
+  function performSearch(event) {
+    event.preventDefault();
+  
+    var searchValue = searchInput.value.trim().toLowerCase();
+  
+    if (searchValue.length > 0) {
+      var results = [
+        {
+          title: "One Piece",
+          image: "poze/one_piece_red.png",
+          link: "pagini/one_piece_red/one_piece_red_detalii.html"
+        },
+        {
+          title: "Ao Ashi",
+          image: "poze/ao_ashi4.jpg",
+          link: "pagini/ao_ashi/ao_ashi_detalii.html"
+        },
+        {
+          title: "Blue Lock",
+          image: "poze/blue_lock_cover.jpg",
+          link: "pagini/blue_lock/blue_lock_detalii.html"
+        },
+        {
+          title: "Cyberpunk Edgerunners",
+          image: "poze/cyberpunk_cover.jpg",
+          link: "pagini/cyberpunk_edgerunners/cyberpunk_edgerunners_detalii.html"
+        },
+        {
+          title: "Demon Slayer Season 1",
+          image: "poze/demon_slayer_s1_cover.jpg",
+          link: "pagini/demon_slayer_s1/demon_slayer_s1_detalii.html"
+        },
+        {
+          title: "Engage Kiss",
+          image: "poze/engage_kiss_cover.png",
+          link: "pagini/engage_kiss/engage_kiss_detalii.html"
+        },
+        {
+          title: "Gachiakuta",
+          image: "poze/gachiakuta_logo.jpg",
+          link: "pagini/gachiakuta/gachiakuta_detalii.html"
+        },
+        {
+          title: "Kagurabachi",
+          image: "poze/kagurabachi_cover.jpg",
+          link: "pagini/kagurabachi/kagurabachi_detalii.html"
+        },
+        {
+          title: "My Hero Academia Season 6",
+          image: "poze/my_hero_s6_cover.jpg",
+          link: "pagini/mha_s6/mha_s6_detalii.html"
+        },
+        {
+          title: "Ori of the Dragon Chain: Heart in the Mind",
+          image: "poze/ori_cover.jpg",
+          link: "pagini/ori_dragon/ori_dragon_detalii.html"
+        },
+        {
+          title: "Ragna Crimson",
+          image: "poze/ragna_crimson_cover.jpg",
+          link: "pagini/ragna_crimson/ragna_crimson_detalii.html"
+        },
+        {
+          title: "Shinobi no Ittoki",
+          image: "poze/shinobi_no_ittoki_cover.jpg",
+          link: "pagini/shinobi_no_ittoki/shinobi_no_ittoki_detalii.html"
+        },
+        {
+          title: "Tokyo Revengers",
+          image: "poze/tokyo_revengers.png",
+          link: "pagini/tokyo_revengers/tokyo_revengers_detalii.html"
+        },
+        {
+          title: "Trigun Stampede",
+          image: "poze/trigun_stampede_cover.jpg",
+          link: "pagini/trigun_stampede/trigun_stampede_detalii.html"
+        },
+        {
+          title: "Vagabond",
+          image: "poze/vagabond_cover.jpg",
+          link: "pagini/vagabond/vagabond_detalii.html"
+        },
+        {
+          title: "Vinland Saga Season 1",
+          image: "poze/vinland_s1_cover.jpg",
+          link: "pagini/vinland_saga_s1/vinland_saga_s1_detalii.html"
+        }
+      ];
+  
+      var filteredResults = results.filter(function(result) {
+        return result.title.toLowerCase().includes(searchValue);
+      });
+  
+      searchResultsList.innerHTML = "";
+  
+      if (filteredResults.length > 0) {
+        filteredResults.forEach(function(result) {
+          var searchItem = document.createElement("li");
+  
+          var thumbnail = document.createElement("img");
+          thumbnail.src = result.image;
+          thumbnail.alt = result.title;
+  
+          var resultDetails = document.createElement("div");
+          resultDetails.classList.add("result-details");
+  
+          var resultTitle = document.createElement("div");
+          resultTitle.classList.add("result-title");
+          resultTitle.textContent = result.title;
+  
+  
+          var resultLink = document.createElement("a");
+          resultLink.classList.add("result-link");
+          resultLink.href = result.link;
+  
+          resultDetails.appendChild(resultTitle);
+          searchItem.appendChild(thumbnail);
+          searchItem.appendChild(resultDetails);
+          searchItem.appendChild(resultLink);
+  
+          searchItem.addEventListener("click", function() {
+            window.location.href = result.link;
+          });
+  
+          searchResultsList.appendChild(searchItem);
+        });
+      } else {
+        searchResultsList.innerHTML = "<li>Niciun rezultat găsit.</li>";
+      }
+    } else {
+      searchResultsList.innerHTML = "";
+    }
+  }
+  
+  var searchForm = document.querySelector(".search-form");
+  searchForm.addEventListener("submit", performSearch);
+  
+  searchInput.addEventListener("input", function() {
+    performSearch(event);
+  });
+  
+  document.addEventListener("click", function(event) {
+    var target = event.target;
+    if (!searchBar.contains(target) && !searchButton.contains(target)) {
+      searchBar.style.display = "none";
+    }
+  });
+            </script>
+  
+          <script>
+              function toggleMenu() {
+                var menuContainer = document.querySelector('.menu-container');
+                document.body.classList.toggle('menu-open'); // Adaugă/elimină clasa "menu-open" la body pentru a deschide/închide meniul
+              }
+            </script>
+
+    </body>
+</html>

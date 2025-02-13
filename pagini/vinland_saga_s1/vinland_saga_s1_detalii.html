@@ -1,0 +1,159 @@
+<html>
+<head>
+    <title>Vinland Saga S1</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="scripts/menu.js"></script>
+    <link rel="stylesheet" href="css/start.css">
+    <link rel="stylesheet" href="css/read.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/vinland_s1_detalii.css">
+    <link rel="stylesheet" href="css/header.css">
+
+</head>
+<body>
+        <!--Header-->
+        <header id="headerr">
+            <div id="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+            <div class="menu-container">
+              <div class="close-menu" onclick="toggleMenu()">Închide Meniu</div>
+              <BR><BR><BR>
+              <ul class="menu-list">
+                <li class="nav-item"><a href="../../main.html" class="nav-link">Acasă</a></li>
+                <li class="nav-item"><a href="../../mai_mult.html" class="nav-link">Mai Mult</a></li>
+                <li class="nav-item"><a href="../../contact.html" class="nav-link">Contact</a></li>
+              </ul>
+            </div>
+            <a href="../../main.html" class="logo-header">OtakuRo</a>
+        </header>
+
+        <br><BR><BR><BR>
+
+
+
+        <!--Sectiune Detalii Manga-->
+        <section class="sectiune-manga">
+            <div id="background">
+                <div id="cover"></div>
+            </div>
+            <div class="container-manga">
+                <div class="detalii-manga">
+                    <div class="row-manga">
+                        <div class="poza-manga">
+                            <div class="manga-poza set-bg" style="background-image: url('poze/vinland_s1_cover.jpg')">
+                            </div>
+                        </div>
+                        <div class="content-manga"> 
+                        <div class="detalii-text-manga">
+                                <div class="titlu">
+                                    <h3>Vinland Saga</h3>
+                                    <span>ヴィンランド・サガ</span>
+                                </div>
+                                <div class="container-desc">
+                                    <p class="text-desc">Tânărul Thorfinn a crescut ascultând poveștile vechilor marinari care au călătorit pe ocean și au ajuns în locul legendei, Vinland. Se spune că ar fi cald și fertil, un loc unde nu ar fi nevoie de lupte - deloc asemănător cu satul înghețat din Islanda în care s-a născut și cu siguranță nu seamănă cu viața lui actuală de mercenar. Războiul este casa lui acum. Deși tatăl său i-a spus odată: "Nu ai dușmani, nimeni nu are. Nu există nimeni pe care este în regulă să îl rănești", pe măsură ce a crescut, Thorfinn a știut că nimic nu era mai departe de adevăr.</p>
+                                    <p class="text-desc">Războiul dintre Anglia și danezi se înrăutățește cu fiecare an care trece. Moartea a devenit ceva obișnuit, iar mercenarii vikingi adoră fiecare clipă. Alierea cu oricare dintre părți va cauza o schimbare masivă în balanța puterii, iar vikingii sunt fericiți să își facă un nume și să ia orice pradă pe care o câștigă pe parcurs. În mijlocul haosului, Thorfinn trebuie să se răzbune și să-l ucidă pe Askeladd, omul care i-a ucis tatăl. Singurul paradis pentru vikingi, se pare, este era războiului și a morții care continuă.</p>
+                                </div>
+                                <div class="info-bg">
+                                <div class="info">
+                                    <span class="info-stanga">Episoade:</span>
+                                    <span class="info-dreapta">24</span>
+                                </div>
+
+                                <div class="info">
+                                    <span class="info-stanga">Status:</span>
+                                    <span class="info-dreapta">Terminat</span>
+                                </div>
+                                <div class="info">
+                                    <span class="info-stanga">Aparitie:</span>
+                                    <span class="info-dreapta"> Jul. 8, 2019</span>
+                                </div>
+                                <div class="info">
+                                    <span class="info-stanga">Studio:</span>
+                                    <span class="info-dreapta">Wit Studio</span>
+                                </div>
+
+                                <div class="info linii-cat">
+                                    <span class="info-stanga"></span>
+                                    <a>Acțiune</a>
+                                    <a>Aventură</a>
+                                    <a>Dramă</a>
+                                </div>
+
+                                </div>
+                                <div class="manga-btn">
+                                    <a href="ep1.html" class="citeste-btn"><span>Vizionează</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <br><br><br><br>
+           <!--Secitiunea de Review si de Altele-->
+           <section class="row-manga">
+                        <div class="review">
+                            <div class="publica-rev">
+                                <div class="titlu-ra">
+                                    <h5>Recenzia ta</h5>
+                                </div>
+                                <form id="reviewForm" onsubmit="postReview(); return false;">
+                                    <input type="text" id="reviewText" placeholder="Scrie ceva interesant" class="text-input" required>
+                                    <button type="submit">PUBLICĂ</button>
+                                </form>
+                            </div>
+                            <br><br>
+                            <div class="alte-rev">
+                                <div class="titlu-ra">
+                                    <h5>Alte Recenzii</h5>
+                                </div>
+                                <div class="item-re">
+                                <div class="avatar-re">
+                                    <img src="poze/pngegg.png" alt="Avatar utilizator">
+                                </div>
+                                </div>
+                                    <div class="container-text">
+                                        <h6>Marian</h6>
+                                        <p>Prea bun acest anime...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="altele">
+                            <div class="rec-manga">
+                                <div class="titlu-ra">
+                                    <h5>S-ar putea să-ți placă și...</h5>
+                                </div>
+                                <div class="image-container">
+                                    <a href="../ori_dragon/ori_dragon_detalii.html" class="image-link">
+                                      <div class="image" style="background-image: url('poze/ori_cover.jpg')"></div>
+                                      <div class="text-overlay">
+                                        <h2 class="text">Ori of the Dragon Chain: "Heart" in the Mind</h2>
+                                      </div>
+                                    </a>
+                                  </div>
+                                <div class="image-container">
+                                    <a href="../ao_ashi/ao_ashi_detalii.html" class="image-link">
+                                      <div class="image" style="background-image: url('poze/ao_ashi4.jpg')"></div>
+                                      <div class="text-overlay">
+                                        <h2 class="text">Ao Ashi</h2>
+                                      </div>
+                                    </a>
+                                  </div> 
+                                <div class="image-container">
+                                    <a href="../tokyo_revengers/tokyo_revengers_detalii.html" class="image-link">
+                                      <div class="image" style="background-image: url('poze/tokyo_revengers.png')"></div>
+                                      <div class="text-overlay">
+                                        <h2 class="text">Tokyo Revengers</h2>
+                                      </div>
+                                    </a>
+                                  </div>
+                            </div>
+                        </div>
+                    </section>
+</body>
+</html>

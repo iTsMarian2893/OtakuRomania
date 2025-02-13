@@ -1,0 +1,332 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+  }  /*  */
+  
+  body {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+  }  /* poza fundal centrare si culoare */
+  
+  
+  header {
+      background-color: rgb(135, 110, 101);
+  }
+  
+  main {
+    padding: 30px;
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #f0f8ff;
+    font-size: 1rem;
+  }
+  
+  
+  .home_background {
+    background-image: url(fundalpatiserie.jpg);
+    background-size: cover;
+    height: 100%;
+  }
+  
+  .home_text {
+    text-align: center;
+    padding-top: 250px;
+  }
+  
+  
+  /* pagina de contact */
+  
+  .contact {
+    padding: 20px;
+  }
+  
+  .contact h2 {
+    margin-bottom: 20px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .contact-info {
+    margin-top: 20px;
+  }
+  
+  .contact-info h3 {
+    margin-bottom: 10px;
+  }
+  
+  .map {
+    margin-top: 20px;
+  }
+  
+  .store-image {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .store-image img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* pagina despre */
+  .about-image {
+    float: left;
+    margin-right: 20px;
+  }
+  .about-image img {
+    width: 300px;
+    height: auto;
+  }
+  .about-content {
+    margin-top: 20px;
+  }
+  h2 {
+    color: #333;
+    margin-top: 20px;
+  }
+  p {
+    line-height: 1.5;
+  }
+  .gallery {
+    margin-top: 40px;
+  }
+  .gallery-item {
+    display: inline-block;
+    margin: 10px;
+  }
+  .gallery-item img {
+    width: 200px;
+    height: auto;
+  }
+  
+  a:hover {
+  color: orange;
+  }   /* coloreaza textul la atingere */
+  
+  header {
+    position: relative;
+    padding: 0 2rem;
+  }
+  .navbar {
+    width: 100%;
+    height: 60px;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .navbar .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .navbar .links {
+    display: flex;
+    gap: 2rem;
+  } /* linkuri drepte si departate */
+  
+  .navbar .toggle_btn{
+    color: whitesmoke;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+  } /* bars */
+  
+  .action_btn{
+    background-color: orange;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+  }  /* colorare buton si atingere */
+  
+  .action_btn:hover{
+    scale: 1.05;
+    color: #fff;
+  }
+  
+  .action_btn:active{
+    scale: 0.95;
+  }
+  
+  
+  /* dropdown menu */
+  .dropdown_menu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 80px;
+    height: 0;
+    width: 300px;
+    background: rgb(135, 110, 101);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  .dropdown_menu.open{
+    height: 180px;
+  }
+  
+  
+  .dropdown_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .dropdown_menu .action_btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  section#hero{
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: azure;
+  } /* Hero section style */
+  
+  #hero h1{
+    font-size: 3rem;
+    margin-bottom: 1rem7;
+  }
+  
+  .header_container{
+    display: flex;
+    height: 175px;
+    background-image: url(header_container_image.jpg);
+    background-position: center;
+    padding-left: 75px;
+    align-items: center;
+  }
+  
+  /* Aranjare produse pe pagina */
+  .product {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-left: 30;
+    padding-right: 30;
+  }
+  
+  .product img {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+  }
+  
+  .product-info {
+    font-family: Arial, sans-serif;
+  }
+  
+  #product-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+  
+  
+  footer {
+    background-color: rgb(135, 110, 101);
+    padding: 20px;
+    text-align: center;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  
+  @media(max-width: 999px){
+    .auth-btn{
+      padding-left: 10px;
+    }
+    .user-btn{
+      padding-left: 10px;
+    }
+    #userBtn.user-btn{
+      padding-left: 10px;
+    }
+  }
+  
+  /* Optimizari telefon */
+  @media(max-width: 992px){
+    .navbar .links,
+    .navbar .action_btn {
+        display: none;
+    }
+  
+    .navbar .toggle_btn{
+        display: block;
+    }
+  
+    .dropdown_menu{
+        display: block;
+    }
+  
+    #product-list{
+        display: block;
+    }
+  
+    .about-image{
+      padding-bottom: 25;
+      width: 100%;
+    }
+  
+  }
+  
+  
+  
+  .dropdown_menu .auth-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  
+  .auth-btn {
+    background-color: orange;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  @media(max-width: 992px){
+  .user-btn{
+    display: block;
+    padding-left: 105px;
+  }
+  .auth-btn{
+    font-size: 15px;
+  }
+  }

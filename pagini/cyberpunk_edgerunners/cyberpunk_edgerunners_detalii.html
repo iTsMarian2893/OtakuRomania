@@ -1,0 +1,158 @@
+<html>
+<head>
+    <title>Cyberpunk: Edgerunners</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="scripts/menu.js"></script>
+    <link rel="stylesheet" href="css/start.css">
+    <link rel="stylesheet" href="css/read.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/cyber_detalii.css">
+    <link rel="stylesheet" href="css/header.css">
+
+</head>
+<body>
+        <!--Header-->
+        <header id="headerr">
+            <div id="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+            <div class="menu-container">
+              <div class="close-menu" onclick="toggleMenu()">Închide Meniu</div>
+              <BR><BR><BR>
+              <ul class="menu-list">
+                <li class="nav-item"><a href="../../main.html" class="nav-link">Acasă</a></li>
+                <li class="nav-item"><a href="../../mai_mult.html" class="nav-link">Mai Mult</a></li>
+                <li class="nav-item"><a href="../../contact.html" class="nav-link">Contact</a></li>
+              </ul>
+            </div>
+            <a href="../../main.html" class="logo-header">OtakuRo</a>
+        </header>
+        <br><BR><BR><BR>
+
+
+
+        <!--Sectiune Detalii Manga-->
+        <section class="sectiune-manga">
+            <div id="background">
+                <div id="cover"></div>
+            </div>
+            <div class="container-manga">
+                <div class="detalii-manga">
+                    <div class="row-manga">
+                        <div class="poza-manga">
+                            <div class="manga-poza set-bg" style="background-image: url('poze/cyberpunk_cover.jpg')">
+                            </div>
+                        </div>
+                        <div class="content-manga"> 
+                            <div class="detalii-text-manga">
+                                <div class="titlu">
+                                    <h3>Cyberpunk: Edgerunners</h3>
+                                    <span>サイバーパンク エッジランナーズ</span>
+                                </div>
+                                <div class="container-desc">
+                                    <p class="text-desc">Visele sunt condamnate să moară în Night City, o metropolă californiană futuristă. Ca adolescent care trăiește în mahalalele orașului, David Martinez încearcă să îndeplinească dorința de-o viață a mamei sale de a ajunge în topul Arasaka, cea mai mare corporație de securitate din lume. În acest scop, el urmează cursurile prestigioasei Academii Arasaka, în timp ce mama sa muncește neobosit pentru a menține familia lor pe linia de plutire.</p>
+                                    <p class="text-desc">Atunci când un incident cu o bandă de stradă lasă viața lui David în paragină, acesta dă peste un dispozitiv cibernetic de tip Sandevistan - o proteză care îi conferă celui care o poartă o viteză supraomenească. Alimentat de furie, David își implantează dispozitivul în spate și îl folosește pentru a se răzbuna pe unul dintre torționarii săi. Acest lucru îl face să fie exmatriculat din academie, spulberându-i speranțele de a-și face vreodată mama mândră.</p>
+                                    <p class="text-desc">După ce a fost martoră la noile abilități ale lui David, frumoasa hoață de date Lucyna "Lucy" Kushinada se oferă să facă echipă cu el, oferindu-i un bilet spre salvare. Cu toate acestea, asocierea cu Lucy îl introduce pe David în lumea Edgerunners - infractori cyborg care încalcă orice lege pentru bani. Edgerunnerii își pierd adesea viața, dacă programele cibernetice nu le sparg mai întâi mințile; dar în lupta sa pentru supraviețuire în interiorul unui sistem corupt, David este gata să riște totul.</p>
+                                </div>
+                                <div class="info-bg">
+                                <div class="info">
+                                    <span class="info-stanga">Episoade:</span>
+                                    <span class="info-dreapta">10</span>
+                                </div>
+                                <div class="info">
+                                    <span class="info-stanga">Status:</span>
+                                    <span class="info-dreapta">Terminat</span>
+                                </div>
+                                <div class="info">
+                                    <span class="info-stanga">Aparitie:</span>
+                                    <span class="info-dreapta">Sep. 13, 2022</span>
+                                </div>
+                                <div class="info">
+                                    <span class="info-stanga">Studio:</span>
+                                    <span class="info-dreapta">Trigger</span>
+                                </div>
+                                <div class="info linii-cat">
+                                    <span class="info-stanga"></span>
+                                    <a>Acțiune</a>
+                                    <a>Sci-Fi</a>
+                                    <a>Crime</a>
+                                    <a>Aventură</a>
+                                </div>
+
+                                </div>
+                                <div class="manga-btn">
+                                    <a href="ep1.html" class="citeste-btn"><span>Vizionează</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <br><br><br><br>
+           <!--Secitiunea de Review si de Altele-->
+           <section class="row-manga">
+                        <div class="review">
+                            <div class="publica-rev">
+                                <div class="titlu-ra">
+                                    <h5>Recenzia ta</h5>
+                                </div>
+                                <form id="reviewForm" onsubmit="postReview(); return false;">
+                                    <input type="text" id="reviewText" placeholder="Scrie ceva interesant" class="text-input" required>
+                                    <button type="submit">PUBLICĂ</button>
+                                </form>
+                            </div>
+                            <br><br>
+                            <div class="alte-rev">
+                                <div class="titlu-ra">
+                                    <h5>Alte Recenzii</h5>
+                                </div>
+                                <div class="item-re">
+                                <div class="avatar-re">
+                                    <img src="poze/pngegg.png" alt="Avatar utilizator">
+                                </div>
+                                </div>
+                                    <div class="container-text">
+                                        <h6>Marian</h6>
+                                        <p>Un anime genial! 10/10</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="altele">
+                            <div class="rec-manga">
+                                <div class="titlu-ra">
+                                    <h5>S-ar putea să-ți placă și...</h5>
+                                </div>
+                                <div class="image-container">
+                                    <a href="../ori_dragon/ori_dragon_detalii.html" class="image-link">
+                                      <div class="image" style="background-image: url('poze/ori_cover.jpg')"></div>
+                                      <div class="text-overlay">
+                                        <h2 class="text">Ori of the Dragon Chain: "Heart" in the Mind</h2>
+                                      </div>
+                                    </a>
+                                  </div>
+                                <div class="image-container">
+                                    <a href="../ao_ashi/ao_ashi_detalii.html" class="image-link">
+                                      <div class="image" style="background-image: url('poze/ao_ashi4.jpg')"></div>
+                                      <div class="text-overlay">
+                                        <h2 class="text">Ao Ashi</h2>
+                                      </div>
+                                    </a>
+                                  </div> 
+                                <div class="image-container">
+                                    <a href="../tokyo_revengers/tokyo_revengers_detalii.html" class="image-link">
+                                      <div class="image" style="background-image: url('poze/tokyo_revengers.png')"></div>
+                                      <div class="text-overlay">
+                                        <h2 class="text">Tokyo Revengers</h2>
+                                      </div>
+                                    </a>
+                                  </div>
+                            </div>
+                        </div>
+                    </section>
+</body>
+</html>

@@ -1,0 +1,233 @@
+ul, ol {
+    margin: 0;
+    padding: 0;
+}
+
+
+@media (min-width: 992px){
+.login-stanga {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}}
+
+@media (min-width: 992px){
+.login-dreapta   {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}}
+
+.login-stanga{
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+@media (min-width: 992px){
+.col-lg-6 {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}}
+
+@media only screen and (min-width: 1200px){
+#container-logi {
+    max-width: 1170px;
+}}
+
+@media (min-width: 1200px){
+#container-logi{
+    max-width: 1140px;
+}}
+
+
+.text-decoration{
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+.icon-profile:before {
+    content: "\e08a";
+}
+.login_form form .input_item span {
+    color: #b7b7b7;
+    font-size: 20px;
+    position: absolute;
+    left: 15px;
+    top: 13px;
+}
+
+.icon-profile{
+    font-family: 'ElegantIcons';
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+
+
+
+.login .login-register {
+    text-align: left;
+    padding-left: 40px;
+}
+
+
+.login .login-register h3 {
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Oswald", sans-serif;
+    margin-bottom: 30px;
+}
+
+
+
+
+.login-register ul li {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+
+.login-register ul li a.facebook {
+    background: #4267b2;
+}
+.login-register ul li a {
+    color: #ffffff;
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    width: 460px;
+    padding: 14px 0;
+    position: relative;
+    margin: 0 auto;
+}
+
+
+
+.login-register  .icon-facebook ul li a i {
+    font-size: 20px;
+    position: absolute;
+    text-decoration: none;
+    left: 32px;
+    top: 14px;
+}
+
+.icon-facebook {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+.login-register ul li a i {
+    font-size: 20px;
+    position: absolute;
+    left: 32px;
+    top: 14px;
+}
+
+.login .login-register ul li a {
+    margin: 0;
+    text-align: center;
+}
+
+.icon-facebook:before {
+    content: "\f09a";
+}
+.login-register ul li a i {
+    font-size: 20px;
+    position: absolute;
+    left: 32px;
+    top: 14px;
+}
+
+
+
+.facebook-logo {
+    background: #4661b0;
+    width: 100px;
+    height: 110px;
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+    border: 15px solid #4661b0;
+    border-bottom: 0;
+}
+.facebook-logo:before {
+    content: "";
+    position: absolute;
+    background: #4661b0;
+    width: 40px;
+    height: 90px;
+    bottom: -30px;
+    right: -37px;
+    border: 20px solid #fff;
+    border-radius: 25px;
+}
+.facebook-logo:after {
+    content: "";
+    position: absolute;
+    background: #fff;
+    width: 55px;
+    height: 20px;
+    top: 50px;
+    right: 5px;
+}
+
+
+
+
+
+
+.login-register .btn-facebook {
+    background: #007bff;
+    text-decoration: none;
+    padding: 12px 42px;
+}
+
+.btn-facebook {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff;
+    letter-spacing: 2px;
+}
+
+
+
+
+
+.login-register .btn-google {
+    background: #ff4343;
+    text-decoration: none;
+    padding: 12px 53px;
+}
+
+.btn-google {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff;
+    letter-spacing: 2px;
+}

@@ -1,0 +1,255 @@
+body {
+    background-image: url('poze/bg_blurat.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Poppins,Arial;
+    color: #aaa;
+    font-size: 14px;
+    line-height: 1.5em;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+    -webkit-text-size-adjust: none;
+}
+  
+:root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
+
+
+
+#header #logo-sus img {
+    height: 70px;
+    width: auto;
+}
+
+
+#wrapper {
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+
+
+
+
+/*Header */
+#header {
+    height: 90px;
+    position: relative;
+    padding: 0;
+}
+
+#header .container {
+    position: relative;
+}
+.container {
+    max-width: 1366px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+
+.menu_site{
+    display: block;
+    position: relative;
+    cursor: pointer;
+    float: left;
+    margin-right: 15px;
+    margin-top: 25px;
+    border-radius: 10px;
+}
+.icon-menu{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+.icon-menu span{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #ffffff;
+    left: 0;
+}
+.icon-menu span:nth-child(1){
+    top: 0;
+}
+.icon-menu span:nth-child(2){
+    top: 8px;
+}
+.icon-menu span:nth-child(3){
+    top: 16px;
+}
+
+.menu-items {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    padding: 10px;
+    background: #007bff;
+    border: 1px solic #ccc;
+    border-radius: 6px;
+}
+.menu-items a{
+    display: block;
+    margin-bottom: 5px;
+    text-decoration: none;
+    color: #fff;
+    padding: 0 25px;
+    font-size: 14px;
+    font-weight: 600;
+    height: 37px;
+    line-height: 37px;
+}
+.menu_site:hover .menu-items {
+    display: block;
+}
+.clearfix::after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+
+/* Sing In */
+.signin-container {
+    cursor: pointer; 
+    transition: background-color 0.2s ease-in-out;
+    display: block;
+    float: right;
+    border: 1px solid #007bff;
+    border-radius: 50px;
+    background-color: #007bff;
+    padding: 20px 30px;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+  
+.signin {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+.signin-container:hover {
+   background-color: #0062cc;
+}
+
+
+
+
+/* Main */
+
+#i-top {
+
+    display: block;
+    min-height: 600px;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.main-container {
+    max-width: 1800px;
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+#i-top .logo {
+    width: 220px;
+    height: 120px;
+    margin: 0 auto;
+}
+.logo {
+    background-image: url("/poze/logo2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    display: block;
+    width: 9.6rem;
+    height: 2.7rem;
+    margin-bottom: 0.45rem;
+    transition: all .2s;
+}
+
+.gohome {
+    background-image: url("/poze/pngegg.jpg") ;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 450px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.gohome .home {
+    background-color: #007bff;
+    transition: background-color 0.2s ease-in-out;
+    font-size: 1.5rem;
+    color: #ec000000;
+
+    padding: 20px 30px;
+    height: 60px;
+    border: 1px solid #007bff;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+
+
+.text-home{
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+
